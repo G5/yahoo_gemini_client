@@ -21,10 +21,20 @@ Or install it yourself as:
 ## Usage
 
 ```ruby
-gemini = YahooGemini.new(
+client = YahooGemini::Client.new(
   client_id: "consumer_key",
-  secret: "consumer_secret",
+  client_secret: "consumer_secret",
 )
+
+client.authorization_url # returns authorization url
+
+# visit authorization url returned in a web browser to get the Authorization Code
+# assuming you've got an authentication code...
+
+client.get_token(authorization_code)
+
+# Advertisers endpoint
+client.advertisers
 ```
 
 ## Development
