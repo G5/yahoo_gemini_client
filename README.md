@@ -21,6 +21,9 @@ Or install it yourself as:
 ## Usage
 
 ```ruby
+# Currently supports OAuth2 Auth Code Strategy (Explicit Grant Flow) only
+# see https://developer.yahoo.com/oauth2/guide/flows_authcode/
+
 client = YahooGemini::Client.new(
   client_id: "consumer_key",
   client_secret: "consumer_secret",
