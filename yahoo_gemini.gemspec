@@ -6,12 +6,12 @@ require 'yahoo_gemini/version'
 Gem::Specification.new do |spec|
   spec.name          = "yahoo_gemini"
   spec.version       = YahooGemini::VERSION
-  spec.authors       = ["Ramon Tayag"]
-  spec.email         = ["ramon.tayag@gmail.com"]
+  spec.authors       = ["Ramon Tayag", "Marc Ignacio"]
+  spec.email         = ["ramon.tayag@gmail.com", "marcrendlignacio@gmail.com"]
 
-  spec.summary       = %q{TODO: Write a short summary, because Rubygems requires one.}
-  spec.description   = %q{TODO: Write a longer description or delete this line.}
-  spec.homepage      = "TODO: Put your gem's website or public repo URL here."
+  spec.summary       = %q{A Ruby Interface to the Yahoo Gemini API}
+  spec.description   = %q{A Ruby Interface to the Yahoo Gemini API}
+  spec.homepage      = "http://github.com/g5/yahoo_gemini"
   spec.license       = "MIT"
 
   # Prevent pushing this gem to RubyGems.org by setting 'allowed_push_host', or
