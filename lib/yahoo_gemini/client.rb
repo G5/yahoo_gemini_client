@@ -1,0 +1,30 @@
+require "oauth2"
+
+module YahooGemini
+  class Client
+    attr_accessor :consumer_key, :consumer_secret
+
+    def initialize(options={})
+      options.each do |key, value|
+        instance_variable_set("@#{key}", value)
+      end
+    end
+
+    def oauth2_client
+      @oauth2_client ||= OAuth2::Client.new(consumer_key, consumer_secret , :site => 'https://api.login.yahoo.com',
+                                  :authorize_url => '/oauth2/request_auth', :token_url => '/oauth2/get_token')
+    end
+
+    def user_agent
+      @user_agent ||= "YahooGeminiRubyGem/#{YahooGemini::VERSION}"
+    end
+
+    def authorization_url
+      oauth2_client.auth_code.authorize_url(
+        :redirect_uri => "oob",
+        :response_type => "code",
+        :language => "en-us",
+      )
+    end
+  end
+end
