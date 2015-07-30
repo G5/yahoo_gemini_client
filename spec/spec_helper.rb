@@ -1,12 +1,14 @@
 $LOAD_PATH.unshift File.expand_path('../../lib', __FILE__)
 require 'pry'
+require 'vcr'
+require 'rspec/its'
 
 require 'dotenv'
 Dotenv.load
 Dotenv.overload '.env.override'
 
+require 'httparty'
 require 'yahoo_gemini'
-require 'vcr'
 
 VCR.configure do |config|
   config.cassette_library_dir = "spec/fixtures/vcr_cassettes"
