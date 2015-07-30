@@ -2,11 +2,14 @@ require 'spec_helper'
 
 module YahooGemini
   describe Client do
-    it "initializes with consumer credentials" do
-      client = YahooGemini::Client.new(
+    let(:client) do
+      described_class.new(
         consumer_key: "consumer_key",
         consumer_secret: "consumer_secret"
       )
+    end
+
+    it "initializes with consumer credentials" do
       expect(client.consumer_key).to eq("consumer_key")
       expect(client.consumer_secret).to eq("consumer_secret")
     end
@@ -34,6 +37,23 @@ module YahooGemini
         expect(parsed_url.query).to eq("client_id=consumer_key&language=en-us&redirect_uri=oob&response_type=code")
       end
     end
+
+    describe "#get_token", :vcr =>  { :record => :once } do
+      let(:client) do
+        described_class.new(
+          consumer_key: ENV["YAHOO_GEMINI_TEST_CONSUMER_KEY"],
+          consumer_secret: ENV["YAHOO_GEMINI_TEST_CONSUMER_SECRET"],
+        )
+      end
+      let(:authorization_code) { ENV["YAHOO_GEMINI_TEST_AUTHORIZATION_CODE"] }
+
+      it "uses the Authorization Code to get an Access Token" do
+        client.get_token(authorization_code)
+        expect(client.access_token).to be_a(OAuth2::AccessToken)
+        expect(client.access_token.expired?).to eq false
+      end
+    end
+
   end
 end
 

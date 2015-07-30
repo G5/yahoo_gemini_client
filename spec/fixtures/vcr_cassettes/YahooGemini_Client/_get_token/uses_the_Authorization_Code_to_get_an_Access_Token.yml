@@ -1,0 +1,52 @@
+---
+http_interactions:
+- request:
+    method: post
+    uri: https://<YAHOO_GEMINI_TEST_CONSUMER_KEY>:<YAHOO_GEMINI_TEST_CONSUMER_SECRET>@api.login.yahoo.com/oauth2/get_token
+    body:
+      encoding: UTF-8
+      string: client_id=<YAHOO_GEMINI_TEST_CONSUMER_KEY>&client_secret=<YAHOO_GEMINI_TEST_CONSUMER_SECRET>&code=<YAHOO_GEMINI_TEST_AUTHORIZATION_CODE>&grant_type=authorization_code&redirect_uri=oob
+    headers:
+      User-Agent:
+      - YahooGeminiRubyGem/0.1.0
+      Content-Type:
+      - application/x-www-form-urlencoded
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Thu, 30 Jul 2015 02:35:12 GMT
+      P3p:
+      - policyref="http://info.yahoo.com/w3c/p3p.xml", CP="CAO DSP COR CUR ADM DEV
+        TAI PSA PSD IVAi IVDi CONi TELo OTPi OUR DELi SAMi OTRi UNRi PUBi IND PHY
+        ONL UNI PUR FIN COM NAV INT DEM CNT STA POL HEA PRE LOC GOV"
+      Cache-Control:
+      - no-store, private
+      Pragma:
+      - no-cache
+      Vary:
+      - Accept-Encoding
+      Content-Length:
+      - '793'
+      Content-Type:
+      - application/json;charset=UTF-8
+      Age:
+      - '1'
+      Connection:
+      - close
+      Strict-Transport-Security:
+      - max-age=15552000
+      Server:
+      - ATS
+    body:
+      encoding: ASCII-8BIT
+      string: '{"access_token":"MM687wX7sz2zHGsXkdJ.vlUOZNTYb3im0loVOt0jQU.abXNMVFDTmF.TzbicF8w_byC9WKTEZQ0m4VrTL2QkzqvRzR8JjwddI0yXjYlS2FNQ.mv5xtTvupfKP_ozIVXVHQb7s34urrBp.J4DzxJ.gkxMwrBXn4kbDsHG.E0tTfasQrBrahoQLDUC7MP1nMGO58Yyfnz_UiL9dA710WkQ8fnGnzpGVolUz2I2CwU2gHlYa1z718aBabGFboENfWg_1UuY8V.d9GjrHSCvLpN_hycV2QoDgMnfzJ8isJbFzw6Xcv6aGsWhK0iN685PUepta7nxDzyKhsPtYmwnNAqIpukkSvijEMBQsd1iExRAwhggOPG2voVCkHF3VIVg2TM0O9.yE2rWs3Z1GG4_NOK0ZKDxNbtCEAJqo2i3EmF2hq3qV8JJDNFfZFhKVYktE9_nwILUpBcONQMko58LZmoDeAIRfkVg4grCEN4S8Ol8CutjfxQB.PbWg1T6J0W6vEqaLXY0NkEHDQbd3ezj8RB8JYwEKqPv8uN9flw0_SKxHyQOF3xD2.LGLV2L9.ajGHHSoYEEYmG3cTS2eBjwlYjOoeijQuCCAU4YvtEqJzp78gi3gXmf7WEnsLLHNINseoaxcnNKC7sYXc0gKt4q8V4YCjpDjzQBKUv5491Sg_LERWRmn7sRVfBGC0b5gzB5mpLSVPlM0Ti.deYL.hOFnPAz1lAPwh4CXzD4B921i7xfXSO7IRAdcMYejkjekTPyCuG75M4fgYSt8G1beE8dAlTSHcgJapZLHuQTt0nA","token_type":"bearer","expires_in":3600,"refresh_token":"AHzNtlUPsH645dM3b03P_.z7.HBWB83reNvk4VWdKuLfbGpdEl.m","xoauth_yahoo_guid":"NTXUYMWKCDVZKZI4ZN6JXVW244"}'
+    http_version: 
+  recorded_at: Thu, 30 Jul 2015 02:35:12 GMT
+recorded_with: VCR 2.9.3
