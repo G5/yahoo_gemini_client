@@ -5,3 +5,11 @@ IFS=$'\n\t'
 bundle install
 
 # Do any other automated setup that you need to do here
+
+if [ ! -f .env.override ];
+then
+  echo 'Copying .env to .env.override. You need to override most, if not all, of the ENV variables there:'
+  cp .env .env.override
+else
+  echo '.env.override already exists. Check the environment variables that you need to override'
+fi
