@@ -29,5 +29,13 @@ module YahooGemini
       end
     end
 
+    def member_uri(ids)
+      GenerateMemberURI.execute(ids)
+    end
+
+    def base_uri
+      raise 'This must be overriden'
+    end
+
   end
 end
