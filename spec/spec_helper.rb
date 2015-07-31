@@ -7,7 +7,6 @@ require 'dotenv'
 Dotenv.load
 Dotenv.overload '.env.override'
 
-require 'httparty'
 require 'yahoo_gemini'
 
 VCR.configure do |config|
