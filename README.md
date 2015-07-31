@@ -37,7 +37,8 @@ client.authorization_url # returns authorization url
 client.get_token(authorization_code)
 
 # Advertisers endpoint
-client.advertisers
+client.advertisers.each { |advertiser| puts advertiser.advertiser_name }
+client.advertisers.find(123)
 ```
 
 ## Development
