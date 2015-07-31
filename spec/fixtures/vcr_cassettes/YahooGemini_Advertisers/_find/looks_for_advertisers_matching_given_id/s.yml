@@ -1,0 +1,239 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://api.admanager.yahoo.com/v1/rest/advertiser/
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Authorization:
+      - Bearer QL1e4ZbZkD1MNtfNeIZWUIDfaA7IFQf3dhjWpC_5fZGsTbPRI8rEr37_F8kmyxty53koYAiYuZPhmshaPaUMqK9JNO5TNm_OpSFp_diBG9U4D.wFZKgg4PlKMJb9CJiJHtFFBRLbsLgV1UdTKGOsVech7CGLPdPPqb7eXAh.TwwhWHZD2AmyzWaGM.YoO8cm0RHv1yymOgjI_rKJ_WtsF7P5odv0KzDwd0K9PoPIbw6LRuFDGcvp2affs8fUe0bTJdn4AveWZYOkIc8V_4K19bVpo89H0F41jydSce7BzSAkBHM8ytFv9LkxKnLaHP_OrtJ0rnDY4xy4_Tv2M39PfnCAkYXfnFUXU1GTTIwf7QsdTV6cetnOmV_bQolZt1qIqNUhtTfBP352sXU4zLf681zNx3kSn_.jX_tbMVqIlFnBWY.Nw_9xrYC2VTW1Yq65kW5MdcODLs7i5jMTxEntYSfCn3HJvnnd49P2e2u8RFPZco3FLfWeHLB4ATOJKZ7cPUKF66XiWVRGF_w.XORWe36TmmoX2dmgJ57_8NuZKnNSPkYObyfzzbELsAriaM6gz1AcFYk_Cg8aQ88uA.SU_mvPR3SXJkXzy78bCxTCLOKooOtNeueKMikbqysiLrO8TW85aol2DuugCnMhEDIjizfrMUw6CkJQIyPiSGC_NIKGLfj2Y4uDcSxnNtktsXzwbv7ARsdzk1CRPKQpxKcD96TtSmf1orvp53giKWjeDikMM3YckEdlDeH5pN6O_une6gWsYPEv__Y7nLyzEUp_GqIV4fu2WKoPDv3u
+      User-Agent:
+      - YahooGeminiRubyGem/0.1.0
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Fri, 31 Jul 2015 03:15:41 GMT
+      P3p:
+      - policyref="http://info.yahoo.com/w3c/p3p.xml", CP="CAO DSP COR CUR ADM DEV
+        TAI PSA PSD IVAi IVDi CONi TELo OTPi OUR DELi SAMi OTRi UNRi PUBi IND PHY
+        ONL UNI PUR FIN COM NAV INT DEM CNT STA POL HEA PRE LOC GOV"
+      Cache-Control:
+      - private
+      Vary:
+      - Accept-Encoding
+      Connection:
+      - close
+      Transfer-Encoding:
+      - chunked
+      Content-Type:
+      - application/json
+    body:
+      encoding: UTF-8
+      string: '{"errors":null,"timestamp":"2015-07-31 3:15:42","response":[{"type":"RESELLER","currency":"USD","status":"ACTIVE","id":1032936,"bookingCountry":"US","language":"en","billingCountry":"US","managedBy":null,"timezone":"America\/Chicago","advertiserName":"Aggregator
+        LSG Gemini"},{"type":"RESELLER","currency":"USD","status":"ACTIVE","id":1034477,"bookingCountry":"US","language":"en","billingCountry":"US","managedBy":null,"timezone":"America\/Los_Angeles","advertiserName":"Aggregator
+        G5 Gemini"},{"type":"ADVERTISER","currency":"USD","status":"ACTIVE","id":1086118,"bookingCountry":"US","language":"en","billingCountry":"US","managedBy":1032936,"timezone":"America\/Chicago","advertiserName":"Bird
+        Kultgen Ford"},{"type":"ADVERTISER","currency":"USD","status":"ACTIVE","id":1086126,"bookingCountry":"US","language":"en","billingCountry":"US","managedBy":1032936,"timezone":"America\/Chicago","advertiserName":"Fiat
+        of Dallas"},{"type":"ADVERTISER","currency":"USD","status":"ACTIVE","id":1086144,"bookingCountry":"US","language":"en","billingCountry":"US","managedBy":1032936,"timezone":"America\/Chicago","advertiserName":"Audi
+        Cincinnati East"},{"type":"ADVERTISER","currency":"USD","status":"ACTIVE","id":1086151,"bookingCountry":"US","language":"en","billingCountry":"US","managedBy":1032936,"timezone":"America\/Chicago","advertiserName":"Benson
+        Honda"},{"type":"ADVERTISER","currency":"USD","status":"ACTIVE","id":1086154,"bookingCountry":"US","language":"en","billingCountry":"US","managedBy":1032936,"timezone":"America\/Chicago","advertiserName":"Brown
+        Buick GMC Subaru"},{"type":"ADVERTISER","currency":"USD","status":"ACTIVE","id":1086158,"bookingCountry":"US","language":"en","billingCountry":"US","managedBy":1032936,"timezone":"America\/Chicago","advertiserName":"Gillman
+        Honda"},{"type":"ADVERTISER","currency":"USD","status":"ACTIVE","id":1086166,"bookingCountry":"US","language":"en","billingCountry":"US","managedBy":1032936,"timezone":"America\/Chicago","advertiserName":"Honda
+        Cars of Katy"},{"type":"ADVERTISER","currency":"USD","status":"ACTIVE","id":1086176,"bookingCountry":"US","language":"en","billingCountry":"US","managedBy":1032936,"timezone":"America\/Chicago","advertiserName":"Classic
+        Granbury"},{"type":"ADVERTISER","currency":"USD","status":"ACTIVE","id":1086178,"bookingCountry":"US","language":"en","billingCountry":"US","managedBy":1032936,"timezone":"America\/Chicago","advertiserName":"Fiat
+        of Dallas"},{"type":"ADVERTISER","currency":"USD","status":"ACTIVE","id":1086181,"bookingCountry":"US","language":"en","billingCountry":"US","managedBy":1032936,"timezone":"America\/Chicago","advertiserName":"Classic
+        Chevrolet of Houston"},{"type":"ADVERTISER","currency":"USD","status":"ACTIVE","id":1086183,"bookingCountry":"US","language":"en","billingCountry":"US","managedBy":1032936,"timezone":"America\/Chicago","advertiserName":"Fernandez
+        Honda"},{"type":"ADVERTISER","currency":"USD","status":"ACTIVE","id":1086184,"bookingCountry":"US","language":"en","billingCountry":"US","managedBy":1032936,"timezone":"America\/Chicago","advertiserName":"Gunn
+        Honda"},{"type":"ADVERTISER","currency":"USD","status":"ACTIVE","id":1086191,"bookingCountry":"US","language":"en","billingCountry":"US","managedBy":1032936,"timezone":"America\/Chicago","advertiserName":"Dondelinger
+        Auto"},{"type":"ADVERTISER","currency":"USD","status":"ACTIVE","id":1086200,"bookingCountry":"US","language":"en","billingCountry":"US","managedBy":1032936,"timezone":"America\/Chicago","advertiserName":"Fort
+        Worth Audi"},{"type":"ADVERTISER","currency":"USD","status":"ACTIVE","id":1086220,"bookingCountry":"US","language":"en","billingCountry":"US","managedBy":1032936,"timezone":"America\/Chicago","advertiserName":"Gulf
+        Coast Auto Park"},{"type":"ADVERTISER","currency":"USD","status":"ACTIVE","id":1086239,"bookingCountry":"US","language":"en","billingCountry":"US","managedBy":1032936,"timezone":"America\/Chicago","advertiserName":"Honda
+        East Cincinnati"},{"type":"ADVERTISER","currency":"USD","status":"ACTIVE","id":1086266,"bookingCountry":"US","language":"en","billingCountry":"US","managedBy":1032936,"timezone":"America\/Chicago","advertiserName":"HRA
+        - Allen Honda"},{"type":"ADVERTISER","currency":"USD","status":"ACTIVE","id":1086268,"bookingCountry":"US","language":"en","billingCountry":"US","managedBy":1032936,"timezone":"America\/Chicago","advertiserName":"HRA
+        - First Texas Honda"},{"type":"ADVERTISER","currency":"USD","status":"ACTIVE","id":1086272,"bookingCountry":"US","language":"en","billingCountry":"US","managedBy":1032936,"timezone":"America\/Chicago","advertiserName":"Howdy
+        Honda"},{"type":"ADVERTISER","currency":"USD","status":"ACTIVE","id":1086276,"bookingCountry":"US","language":"en","billingCountry":"US","managedBy":1032936,"timezone":"America\/Chicago","advertiserName":"HRA
+        - Cleo Bay Honda"},{"type":"ADVERTISER","currency":"USD","status":"ACTIVE","id":1086280,"bookingCountry":"US","language":"en","billingCountry":"US","managedBy":1032936,"timezone":"America\/Chicago","advertiserName":"Honda
+        of Clear Lake"},{"type":"ADVERTISER","currency":"USD","status":"ACTIVE","id":1086290,"bookingCountry":"US","language":"en","billingCountry":"US","managedBy":1032936,"timezone":"America\/Chicago","advertiserName":"Honda
+        San Marcos"},{"type":"ADVERTISER","currency":"USD","status":"ACTIVE","id":1086498,"bookingCountry":"US","language":"en","billingCountry":"US","managedBy":1032936,"timezone":"America\/Chicago","advertiserName":"HRA
+        - Greg May Honda"},{"type":"ADVERTISER","currency":"USD","status":"ACTIVE","id":1086509,"bookingCountry":"US","language":"en","billingCountry":"US","managedBy":1032936,"timezone":"America\/Chicago","advertiserName":"HRA
+        - Howdy Honda"},{"type":"ADVERTISER","currency":"USD","status":"ACTIVE","id":1086524,"bookingCountry":"US","language":"en","billingCountry":"US","managedBy":1032936,"timezone":"America\/Chicago","advertiserName":"HRA
+        - Honda San Marcos"},{"type":"ADVERTISER","currency":"USD","status":"ACTIVE","id":1086527,"bookingCountry":"US","language":"en","billingCountry":"US","managedBy":1032936,"timezone":"America\/Chicago","advertiserName":"Maserati
+        of Cincinnati"},{"type":"ADVERTISER","currency":"USD","status":"ACTIVE","id":1086529,"bookingCountry":"US","language":"en","billingCountry":"US","managedBy":1032936,"timezone":"America\/Chicago","advertiserName":"Porsche
+        of the Village"},{"type":"ADVERTISER","currency":"USD","status":"ACTIVE","id":1086538,"bookingCountry":"US","language":"en","billingCountry":"US","managedBy":1032936,"timezone":"America\/Chicago","advertiserName":"Planet
+        Lincoln"},{"type":"ADVERTISER","currency":"USD","status":"ACTIVE","id":1086539,"bookingCountry":"US","language":"en","billingCountry":"US","managedBy":1032936,"timezone":"America\/Chicago","advertiserName":"Tarbox
+        Hyundai"},{"type":"ADVERTISER","currency":"USD","status":"ACTIVE","id":1086547,"bookingCountry":"US","language":"en","billingCountry":"US","managedBy":1032936,"timezone":"America\/Chicago","advertiserName":"HRA
+        - Round Rock Honda"},{"type":"ADVERTISER","currency":"USD","status":"ACTIVE","id":1086555,"bookingCountry":"US","language":"en","billingCountry":"US","managedBy":1032936,"timezone":"America\/Chicago","advertiserName":"John
+        Eagle Acura"},{"type":"ADVERTISER","currency":"USD","status":"ACTIVE","id":1086557,"bookingCountry":"US","language":"en","billingCountry":"US","managedBy":1032936,"timezone":"America\/Chicago","advertiserName":"John
+        Eagle Honda of Houston"},{"type":"ADVERTISER","currency":"USD","status":"ACTIVE","id":1086582,"bookingCountry":"US","language":"en","billingCountry":"US","managedBy":1032936,"timezone":"America\/Chicago","advertiserName":"Planet
+        Ford 45"},{"type":"ADVERTISER","currency":"USD","status":"ACTIVE","id":1086584,"bookingCountry":"US","language":"en","billingCountry":"US","managedBy":1032936,"timezone":"America\/Chicago","advertiserName":"Winner
+        Chevrolet"},{"type":"ADVERTISER","currency":"USD","status":"ACTIVE","id":1086590,"bookingCountry":"US","language":"en","billingCountry":"US","managedBy":1032936,"timezone":"America\/Chicago","advertiserName":"Mazda
+        of Clear Lake"},{"type":"ADVERTISER","currency":"USD","status":"ACTIVE","id":1089449,"bookingCountry":"US","language":"en","billingCountry":"US","managedBy":1034477,"timezone":"America\/Los_Angeles","advertiserName":"Test"}]}'
+    http_version: 
+  recorded_at: Fri, 31 Jul 2015 03:15:42 GMT
+- request:
+    method: post
+    uri: https://<YAHOO_GEMINI_TEST_CONSUMER_KEY>:<YAHOO_GEMINI_TEST_CONSUMER_SECRET>@api.login.yahoo.com/oauth2/get_token
+    body:
+      encoding: UTF-8
+      string: client_id=<YAHOO_GEMINI_TEST_CONSUMER_KEY>&client_secret=<YAHOO_GEMINI_TEST_CONSUMER_SECRET>&code=<YAHOO_GEMINI_TEST_AUTHORIZATION_CODE>&grant_type=authorization_code&redirect_uri=oob
+    headers:
+      User-Agent:
+      - YahooGeminiRubyGem/0.1.0
+      Content-Type:
+      - application/x-www-form-urlencoded
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Fri, 31 Jul 2015 03:50:36 GMT
+      P3p:
+      - policyref="http://info.yahoo.com/w3c/p3p.xml", CP="CAO DSP COR CUR ADM DEV
+        TAI PSA PSD IVAi IVDi CONi TELo OTPi OUR DELi SAMi OTRi UNRi PUBi IND PHY
+        ONL UNI PUR FIN COM NAV INT DEM CNT STA POL HEA PRE LOC GOV"
+      Cache-Control:
+      - no-store, private
+      Pragma:
+      - no-cache
+      Vary:
+      - Accept-Encoding
+      Content-Length:
+      - '794'
+      Content-Type:
+      - application/json;charset=UTF-8
+      Age:
+      - '0'
+      Connection:
+      - close
+      Strict-Transport-Security:
+      - max-age=15552000
+      Server:
+      - ATS
+    body:
+      encoding: ASCII-8BIT
+      string: '{"access_token":"4UZmGo3enFhGFBBOmiyVsbzqj6SsZgXAM.ANAtwNrkD2tL5o7x2FEV0g6M43M0CqfaHGg9V5RR6sHz2vPS1e75nQgivRYOpZNwZ8wfNkApt85a9neCc9iHFm0dLrSovWoudxPHKxvaDd758Ou0fJnJx8pewr7er7hVHhVN5bxLR45C9lQNMgKABBlFb02k4Aax3M.9Ajs.shG1Ucef75W5h5996IhHd7OGoQTAXK9VGSf.9ceWY7xLB9HyJXebU6d2H7Vf2tvMkg6DVZHdsiYop7MSQ_ZQ7WjVnsyC2ZqroStRtTyJCvQqf9RHrM_tTIAzn6U6VH1178nBSh3.IEx8wFKjNyhISWBSWR8WyD7jRE1VorC5a_JICQxXFiBlF34LPfQKAclEIf4_WVJLpCbovznczrdHJ0AB1Uo52Mi8TAU7sNnFaeNIprsr6wTlWZrGTTqSDLHIcHj1fxJHg_y7P8fOqOFjFGi9Wvd9aVnYBq9npgmkNLr0FdoE6zdqFalGyJJYHsvaVMZqfL549.u6AYRbpk6HVYKwqXZwnLLl5f2SVAnYx7sEPB35iiM4G8lvkMvvte.niFexVYZPU.zyDOBUVykqHbPmKHv5hSWafOOv5X87KV2GdSCoVTi_NKpNW3loVZ_tr5tisSRWoPL19b4gPuJrmBPO2g_W339smXjVBjwmldMCsZMhXkA_pOC3vifbXyYsuHj8aIOYHpK8JipfULLY4qG9ZC0YvP4hXFfS6ZjEWCB2UP4nYL6MeFDiGdsrSBb2Iw2dBsTSJddmQqJ_oXQuRJz3IR","token_type":"bearer","expires_in":3600,"refresh_token":"AHzNtlUPsH645dM3b03P_.z7.HBWB83reNvk4VWdKuLfbGpdEl.m","xoauth_yahoo_guid":"NTXUYMWKCDVZKZI4ZN6JXVW244"}'
+    http_version: 
+  recorded_at: Fri, 31 Jul 2015 03:50:37 GMT
+- request:
+    method: get
+    uri: https://api.admanager.yahoo.com/v1/rest/advertiser/
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Authorization:
+      - Bearer 4UZmGo3enFhGFBBOmiyVsbzqj6SsZgXAM.ANAtwNrkD2tL5o7x2FEV0g6M43M0CqfaHGg9V5RR6sHz2vPS1e75nQgivRYOpZNwZ8wfNkApt85a9neCc9iHFm0dLrSovWoudxPHKxvaDd758Ou0fJnJx8pewr7er7hVHhVN5bxLR45C9lQNMgKABBlFb02k4Aax3M.9Ajs.shG1Ucef75W5h5996IhHd7OGoQTAXK9VGSf.9ceWY7xLB9HyJXebU6d2H7Vf2tvMkg6DVZHdsiYop7MSQ_ZQ7WjVnsyC2ZqroStRtTyJCvQqf9RHrM_tTIAzn6U6VH1178nBSh3.IEx8wFKjNyhISWBSWR8WyD7jRE1VorC5a_JICQxXFiBlF34LPfQKAclEIf4_WVJLpCbovznczrdHJ0AB1Uo52Mi8TAU7sNnFaeNIprsr6wTlWZrGTTqSDLHIcHj1fxJHg_y7P8fOqOFjFGi9Wvd9aVnYBq9npgmkNLr0FdoE6zdqFalGyJJYHsvaVMZqfL549.u6AYRbpk6HVYKwqXZwnLLl5f2SVAnYx7sEPB35iiM4G8lvkMvvte.niFexVYZPU.zyDOBUVykqHbPmKHv5hSWafOOv5X87KV2GdSCoVTi_NKpNW3loVZ_tr5tisSRWoPL19b4gPuJrmBPO2g_W339smXjVBjwmldMCsZMhXkA_pOC3vifbXyYsuHj8aIOYHpK8JipfULLY4qG9ZC0YvP4hXFfS6ZjEWCB2UP4nYL6MeFDiGdsrSBb2Iw2dBsTSJddmQqJ_oXQuRJz3IR
+      User-Agent:
+      - YahooGeminiRubyGem/0.1.0
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Fri, 31 Jul 2015 03:50:38 GMT
+      P3p:
+      - policyref="http://info.yahoo.com/w3c/p3p.xml", CP="CAO DSP COR CUR ADM DEV
+        TAI PSA PSD IVAi IVDi CONi TELo OTPi OUR DELi SAMi OTRi UNRi PUBi IND PHY
+        ONL UNI PUR FIN COM NAV INT DEM CNT STA POL HEA PRE LOC GOV"
+      Cache-Control:
+      - private
+      Vary:
+      - Accept-Encoding
+      Connection:
+      - close
+      Transfer-Encoding:
+      - chunked
+      Content-Type:
+      - application/json
+    body:
+      encoding: UTF-8
+      string: '{"errors":null,"timestamp":"2015-07-31 3:50:38","response":[{"bookingCountry":"US","type":"RESELLER","billingCountry":"US","status":"ACTIVE","id":1032936,"currency":"USD","managedBy":null,"language":"en","timezone":"America\/Chicago","advertiserName":"Aggregator
+        LSG Gemini"},{"bookingCountry":"US","type":"RESELLER","billingCountry":"US","status":"ACTIVE","id":1034477,"currency":"USD","managedBy":null,"language":"en","timezone":"America\/Los_Angeles","advertiserName":"Aggregator
+        G5 Gemini"},{"bookingCountry":"US","type":"ADVERTISER","billingCountry":"US","status":"ACTIVE","id":1086118,"currency":"USD","managedBy":1032936,"language":"en","timezone":"America\/Chicago","advertiserName":"Bird
+        Kultgen Ford"},{"bookingCountry":"US","type":"ADVERTISER","billingCountry":"US","status":"ACTIVE","id":1086126,"currency":"USD","managedBy":1032936,"language":"en","timezone":"America\/Chicago","advertiserName":"Fiat
+        of Dallas"},{"bookingCountry":"US","type":"ADVERTISER","billingCountry":"US","status":"ACTIVE","id":1086144,"currency":"USD","managedBy":1032936,"language":"en","timezone":"America\/Chicago","advertiserName":"Audi
+        Cincinnati East"},{"bookingCountry":"US","type":"ADVERTISER","billingCountry":"US","status":"ACTIVE","id":1086151,"currency":"USD","managedBy":1032936,"language":"en","timezone":"America\/Chicago","advertiserName":"Benson
+        Honda"},{"bookingCountry":"US","type":"ADVERTISER","billingCountry":"US","status":"ACTIVE","id":1086154,"currency":"USD","managedBy":1032936,"language":"en","timezone":"America\/Chicago","advertiserName":"Brown
+        Buick GMC Subaru"},{"bookingCountry":"US","type":"ADVERTISER","billingCountry":"US","status":"ACTIVE","id":1086158,"currency":"USD","managedBy":1032936,"language":"en","timezone":"America\/Chicago","advertiserName":"Gillman
+        Honda"},{"bookingCountry":"US","type":"ADVERTISER","billingCountry":"US","status":"ACTIVE","id":1086166,"currency":"USD","managedBy":1032936,"language":"en","timezone":"America\/Chicago","advertiserName":"Honda
+        Cars of Katy"},{"bookingCountry":"US","type":"ADVERTISER","billingCountry":"US","status":"ACTIVE","id":1086176,"currency":"USD","managedBy":1032936,"language":"en","timezone":"America\/Chicago","advertiserName":"Classic
+        Granbury"},{"bookingCountry":"US","type":"ADVERTISER","billingCountry":"US","status":"ACTIVE","id":1086178,"currency":"USD","managedBy":1032936,"language":"en","timezone":"America\/Chicago","advertiserName":"Fiat
+        of Dallas"},{"bookingCountry":"US","type":"ADVERTISER","billingCountry":"US","status":"ACTIVE","id":1086181,"currency":"USD","managedBy":1032936,"language":"en","timezone":"America\/Chicago","advertiserName":"Classic
+        Chevrolet of Houston"},{"bookingCountry":"US","type":"ADVERTISER","billingCountry":"US","status":"ACTIVE","id":1086183,"currency":"USD","managedBy":1032936,"language":"en","timezone":"America\/Chicago","advertiserName":"Fernandez
+        Honda"},{"bookingCountry":"US","type":"ADVERTISER","billingCountry":"US","status":"ACTIVE","id":1086184,"currency":"USD","managedBy":1032936,"language":"en","timezone":"America\/Chicago","advertiserName":"Gunn
+        Honda"},{"bookingCountry":"US","type":"ADVERTISER","billingCountry":"US","status":"ACTIVE","id":1086191,"currency":"USD","managedBy":1032936,"language":"en","timezone":"America\/Chicago","advertiserName":"Dondelinger
+        Auto"},{"bookingCountry":"US","type":"ADVERTISER","billingCountry":"US","status":"ACTIVE","id":1086200,"currency":"USD","managedBy":1032936,"language":"en","timezone":"America\/Chicago","advertiserName":"Fort
+        Worth Audi"},{"bookingCountry":"US","type":"ADVERTISER","billingCountry":"US","status":"ACTIVE","id":1086220,"currency":"USD","managedBy":1032936,"language":"en","timezone":"America\/Chicago","advertiserName":"Gulf
+        Coast Auto Park"},{"bookingCountry":"US","type":"ADVERTISER","billingCountry":"US","status":"ACTIVE","id":1086239,"currency":"USD","managedBy":1032936,"language":"en","timezone":"America\/Chicago","advertiserName":"Honda
+        East Cincinnati"},{"bookingCountry":"US","type":"ADVERTISER","billingCountry":"US","status":"ACTIVE","id":1086266,"currency":"USD","managedBy":1032936,"language":"en","timezone":"America\/Chicago","advertiserName":"HRA
+        - Allen Honda"},{"bookingCountry":"US","type":"ADVERTISER","billingCountry":"US","status":"ACTIVE","id":1086268,"currency":"USD","managedBy":1032936,"language":"en","timezone":"America\/Chicago","advertiserName":"HRA
+        - First Texas Honda"},{"bookingCountry":"US","type":"ADVERTISER","billingCountry":"US","status":"ACTIVE","id":1086272,"currency":"USD","managedBy":1032936,"language":"en","timezone":"America\/Chicago","advertiserName":"Howdy
+        Honda"},{"bookingCountry":"US","type":"ADVERTISER","billingCountry":"US","status":"ACTIVE","id":1086276,"currency":"USD","managedBy":1032936,"language":"en","timezone":"America\/Chicago","advertiserName":"HRA
+        - Cleo Bay Honda"},{"bookingCountry":"US","type":"ADVERTISER","billingCountry":"US","status":"ACTIVE","id":1086280,"currency":"USD","managedBy":1032936,"language":"en","timezone":"America\/Chicago","advertiserName":"Honda
+        of Clear Lake"},{"bookingCountry":"US","type":"ADVERTISER","billingCountry":"US","status":"ACTIVE","id":1086290,"currency":"USD","managedBy":1032936,"language":"en","timezone":"America\/Chicago","advertiserName":"Honda
+        San Marcos"},{"bookingCountry":"US","type":"ADVERTISER","billingCountry":"US","status":"ACTIVE","id":1086498,"currency":"USD","managedBy":1032936,"language":"en","timezone":"America\/Chicago","advertiserName":"HRA
+        - Greg May Honda"},{"bookingCountry":"US","type":"ADVERTISER","billingCountry":"US","status":"ACTIVE","id":1086509,"currency":"USD","managedBy":1032936,"language":"en","timezone":"America\/Chicago","advertiserName":"HRA
+        - Howdy Honda"},{"bookingCountry":"US","type":"ADVERTISER","billingCountry":"US","status":"ACTIVE","id":1086524,"currency":"USD","managedBy":1032936,"language":"en","timezone":"America\/Chicago","advertiserName":"HRA
+        - Honda San Marcos"},{"bookingCountry":"US","type":"ADVERTISER","billingCountry":"US","status":"ACTIVE","id":1086527,"currency":"USD","managedBy":1032936,"language":"en","timezone":"America\/Chicago","advertiserName":"Maserati
+        of Cincinnati"},{"bookingCountry":"US","type":"ADVERTISER","billingCountry":"US","status":"ACTIVE","id":1086529,"currency":"USD","managedBy":1032936,"language":"en","timezone":"America\/Chicago","advertiserName":"Porsche
+        of the Village"},{"bookingCountry":"US","type":"ADVERTISER","billingCountry":"US","status":"ACTIVE","id":1086538,"currency":"USD","managedBy":1032936,"language":"en","timezone":"America\/Chicago","advertiserName":"Planet
+        Lincoln"},{"bookingCountry":"US","type":"ADVERTISER","billingCountry":"US","status":"ACTIVE","id":1086539,"currency":"USD","managedBy":1032936,"language":"en","timezone":"America\/Chicago","advertiserName":"Tarbox
+        Hyundai"},{"bookingCountry":"US","type":"ADVERTISER","billingCountry":"US","status":"ACTIVE","id":1086547,"currency":"USD","managedBy":1032936,"language":"en","timezone":"America\/Chicago","advertiserName":"HRA
+        - Round Rock Honda"},{"bookingCountry":"US","type":"ADVERTISER","billingCountry":"US","status":"ACTIVE","id":1086555,"currency":"USD","managedBy":1032936,"language":"en","timezone":"America\/Chicago","advertiserName":"John
+        Eagle Acura"},{"bookingCountry":"US","type":"ADVERTISER","billingCountry":"US","status":"ACTIVE","id":1086557,"currency":"USD","managedBy":1032936,"language":"en","timezone":"America\/Chicago","advertiserName":"John
+        Eagle Honda of Houston"},{"bookingCountry":"US","type":"ADVERTISER","billingCountry":"US","status":"ACTIVE","id":1086582,"currency":"USD","managedBy":1032936,"language":"en","timezone":"America\/Chicago","advertiserName":"Planet
+        Ford 45"},{"bookingCountry":"US","type":"ADVERTISER","billingCountry":"US","status":"ACTIVE","id":1086584,"currency":"USD","managedBy":1032936,"language":"en","timezone":"America\/Chicago","advertiserName":"Winner
+        Chevrolet"},{"bookingCountry":"US","type":"ADVERTISER","billingCountry":"US","status":"ACTIVE","id":1086590,"currency":"USD","managedBy":1032936,"language":"en","timezone":"America\/Chicago","advertiserName":"Mazda
+        of Clear Lake"},{"bookingCountry":"US","type":"ADVERTISER","billingCountry":"US","status":"ACTIVE","id":1089449,"currency":"USD","managedBy":1034477,"language":"en","timezone":"America\/Los_Angeles","advertiserName":"Test"}]}'
+    http_version: 
+  recorded_at: Fri, 31 Jul 2015 03:50:39 GMT
+- request:
+    method: get
+    uri: https://api.admanager.yahoo.com/v1/rest/advertiser/?id=1034477
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Authorization:
+      - Bearer 4UZmGo3enFhGFBBOmiyVsbzqj6SsZgXAM.ANAtwNrkD2tL5o7x2FEV0g6M43M0CqfaHGg9V5RR6sHz2vPS1e75nQgivRYOpZNwZ8wfNkApt85a9neCc9iHFm0dLrSovWoudxPHKxvaDd758Ou0fJnJx8pewr7er7hVHhVN5bxLR45C9lQNMgKABBlFb02k4Aax3M.9Ajs.shG1Ucef75W5h5996IhHd7OGoQTAXK9VGSf.9ceWY7xLB9HyJXebU6d2H7Vf2tvMkg6DVZHdsiYop7MSQ_ZQ7WjVnsyC2ZqroStRtTyJCvQqf9RHrM_tTIAzn6U6VH1178nBSh3.IEx8wFKjNyhISWBSWR8WyD7jRE1VorC5a_JICQxXFiBlF34LPfQKAclEIf4_WVJLpCbovznczrdHJ0AB1Uo52Mi8TAU7sNnFaeNIprsr6wTlWZrGTTqSDLHIcHj1fxJHg_y7P8fOqOFjFGi9Wvd9aVnYBq9npgmkNLr0FdoE6zdqFalGyJJYHsvaVMZqfL549.u6AYRbpk6HVYKwqXZwnLLl5f2SVAnYx7sEPB35iiM4G8lvkMvvte.niFexVYZPU.zyDOBUVykqHbPmKHv5hSWafOOv5X87KV2GdSCoVTi_NKpNW3loVZ_tr5tisSRWoPL19b4gPuJrmBPO2g_W339smXjVBjwmldMCsZMhXkA_pOC3vifbXyYsuHj8aIOYHpK8JipfULLY4qG9ZC0YvP4hXFfS6ZjEWCB2UP4nYL6MeFDiGdsrSBb2Iw2dBsTSJddmQqJ_oXQuRJz3IR
+      User-Agent:
+      - YahooGeminiRubyGem/0.1.0
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Fri, 31 Jul 2015 03:50:40 GMT
+      P3p:
+      - policyref="http://info.yahoo.com/w3c/p3p.xml", CP="CAO DSP COR CUR ADM DEV
+        TAI PSA PSD IVAi IVDi CONi TELo OTPi OUR DELi SAMi OTRi UNRi PUBi IND PHY
+        ONL UNI PUR FIN COM NAV INT DEM CNT STA POL HEA PRE LOC GOV"
+      Cache-Control:
+      - private
+      Vary:
+      - Accept-Encoding
+      Content-Length:
+      - '496'
+      Connection:
+      - close
+      Content-Type:
+      - application/json
+    body:
+      encoding: UTF-8
+      string: '{"errors":null,"timestamp":"2015-07-31 3:50:40","response":[{"currency":"USD","type":"RESELLER","advertiserName":"Aggregator
+        LSG Gemini","timezone":"America\/Chicago","bookingCountry":"US","language":"en","status":"ACTIVE","id":1032936,"billingCountry":"US","managedBy":null},{"currency":"USD","type":"RESELLER","advertiserName":"Aggregator
+        G5 Gemini","timezone":"America\/Los_Angeles","bookingCountry":"US","language":"en","status":"ACTIVE","id":1034477,"billingCountry":"US","managedBy":null}]}'
+    http_version: 
+  recorded_at: Fri, 31 Jul 2015 03:50:40 GMT
+recorded_with: VCR 2.9.3
