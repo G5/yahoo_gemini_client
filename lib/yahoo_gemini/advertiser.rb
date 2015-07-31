@@ -47,14 +47,3 @@ module YahooGemini
 
   end
 end
-
-# {"type"=>"ADVERTISER",
-#   "currency"=>"USD",
-#   "id"=>1086126,
-#   "status"=>"ACTIVE",
-#   "timezone"=>"America/Chicago",
-#   "bookingCountry"=>"US",
-#   "advertiserName"=>"Fiat of Dallas",
-#   "billingCountry"=>"US",
-#   "language"=>"en",
-#   "managedBy"=>1032936},
