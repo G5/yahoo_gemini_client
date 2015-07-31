@@ -17,5 +17,17 @@ module YahooGemini
       @members.each { |member| yield member }
     end
 
+    private
+
+    def get(uri)
+      response = HTTParty.get(uri, headers: api_request_headers)
+      if response.success?
+        JSON.parse(response.body).with_indifferent_access[:response]
+      else
+        # TODO testme
+        raise "Reponse Unsuccessful: #{response.body}"
+      end
+    end
+
   end
 end

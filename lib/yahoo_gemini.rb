@@ -1,3 +1,4 @@
+require "active_support/core_ext/hash/indifferent_access"
 require "yahoo_gemini/version"
 require "yahoo_gemini/client"
 require "yahoo_gemini/collection"
