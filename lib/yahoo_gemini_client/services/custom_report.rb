@@ -1,4 +1,4 @@
-module YahooGemini
+module YahooGeminiClient
   class CustomReport
 
     include Virtus.model

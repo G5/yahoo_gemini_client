@@ -1,6 +1,6 @@
 require 'spec_helper'
 
-module YahooGemini
+module YahooGeminiClient
   describe BaseResponse do
     describe "attributes" do
       subject { described_class }

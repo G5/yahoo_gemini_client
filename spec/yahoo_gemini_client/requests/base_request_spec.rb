@@ -1,6 +1,6 @@
 require 'spec_helper'
 
-module YahooGemini
+module YahooGeminiClient
   describe BaseRequest do
 
     describe "attributes" do

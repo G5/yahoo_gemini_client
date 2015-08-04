@@ -1,6 +1,6 @@
 require 'spec_helper'
 
-module YahooGemini
+module YahooGeminiClient
   describe CustomReport do
     subject { described_class.create(
       cube: "performance_stats",

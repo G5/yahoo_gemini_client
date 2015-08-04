@@ -1,4 +1,4 @@
-module YahooGemini
+module YahooGeminiClient
   class BaseRequest
 
     include Virtus.model
