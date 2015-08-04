@@ -1,6 +1,6 @@
 require 'spec_helper'
 
-module YahooGemini
+module YahooGeminiClient
   describe Client do
     let(:consumer_key) { ENV["YAHOO_GEMINI_TEST_CONSUMER_KEY"] }
     let(:consumer_secret) { ENV["YAHOO_GEMINI_TEST_CONSUMER_SECRET"] }
@@ -23,8 +23,8 @@ module YahooGemini
     end
 
     describe "#user_agent" do
-      it "defaults YahooGeminiRubyGem/version" do
-        expect(subject.user_agent).to eq("YahooGeminiRubyGem/#{YahooGemini::VERSION}")
+      it "defaults YahooGeminiClientRubyGem/version" do
+        expect(subject.user_agent).to eq("YahooGeminiClientRubyGem/#{YahooGeminiClient::VERSION}")
       end
     end
 

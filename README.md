@@ -1,4 +1,4 @@
-# YahooGemini
+# YahooGeminiClient
 
 Ruby wrapper for the Yahoo! Gemini API
 
@@ -7,7 +7,7 @@ Ruby wrapper for the Yahoo! Gemini API
 Add this line to your application's Gemfile:
 
 ```ruby
-gem 'yahoo_gemini'
+gem 'yahoo_gemini_client'
 ```
 
 And then execute:
@@ -16,7 +16,7 @@ And then execute:
 
 Or install it yourself as:
 
-    $ gem install yahoo_gemini
+    $ gem install yahoo_gemini_client
 
 ## Usage
 
@@ -24,7 +24,7 @@ Or install it yourself as:
 # Currently supports OAuth2 Auth Code Strategy (Explicit Grant Flow) only
 # see https://developer.yahoo.com/oauth2/guide/flows_authcode/
 
-client = YahooGemini::Client.new(
+client = YahooGeminiClient::Client.new(
   client_id: "consumer_key",
   client_secret: "consumer_secret",
 )
@@ -49,7 +49,7 @@ To install this gem onto your local machine, run `bundle exec rake install`. To 
 
 ## Contributing
 
-Bug reports and pull requests are welcome on GitHub at https://github.com/[USERNAME]/yahoo_gemini. This project is intended to be a safe, welcoming space for collaboration, and contributors are expected to adhere to the [Contributor Covenant](contributor-covenant.org) code of conduct.
+Bug reports and pull requests are welcome on GitHub at https://github.com/g5/yahoo_gemini_client. This project is intended to be a safe, welcoming space for collaboration, and contributors are expected to adhere to the [Contributor Covenant](contributor-covenant.org) code of conduct.
 
 
 ## License

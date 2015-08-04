@@ -1,6 +1,6 @@
 require 'spec_helper'
 
-module YahooGemini
+module YahooGeminiClient
   describe Advertiser do
     describe "initialization" do
       subject do

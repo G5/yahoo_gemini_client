@@ -1,6 +1,6 @@
 require 'spec_helper'
 
-module YahooGemini
+module YahooGeminiClient
   RSpec.describe GenerateMemberURI, ".execute" do
     let(:base_uri) { "http://base.com" }
 
