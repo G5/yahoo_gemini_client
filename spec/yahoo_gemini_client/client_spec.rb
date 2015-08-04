@@ -4,6 +4,9 @@ module YahooGeminiClient
   describe Client do
     let(:consumer_key) { ENV["YAHOO_GEMINI_TEST_CONSUMER_KEY"] }
     let(:consumer_secret) { ENV["YAHOO_GEMINI_TEST_CONSUMER_SECRET"] }
+    let(:access_token) { ENV["YAHOO_GEMINI_TEST_ACCESS_TOKEN"] }
+    let(:refresh_token) { ENV["YAHOO_GEMINI_TEST_REFRESH_TOKEN"] }
+    let(:expires_at) { Time.now + 200 }
 
     context "initialization" do
       let(:client) do
@@ -19,6 +22,27 @@ module YahooGeminiClient
 
         expect(client.consumer_key).to eq(consumer_key)
         expect(client.consumer_secret).to eq(consumer_secret)
+      end
+
+      context "with access token and refresh token" do
+        let(:client) do
+          described_class.new(
+            consumer_key: consumer_key,
+            consumer_secret: consumer_secret,
+            token: {
+              access_token: access_token,
+              refresh_token: refresh_token,
+            },
+          )
+        end
+
+        it "initializes the oauth2 token" do
+          expect(access_token).not_to be_empty
+          expect(refresh_token).not_to be_empty
+
+          expect(client.token.token).to eq access_token
+          expect(client.token.refresh_token).to eq refresh_token
+        end
       end
     end
 
