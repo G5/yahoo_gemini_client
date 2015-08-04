@@ -17,6 +17,8 @@ VCR.configure do |config|
     "YAHOO_GEMINI_TEST_CONSUMER_KEY",
     "YAHOO_GEMINI_TEST_CONSUMER_SECRET",
     "YAHOO_GEMINI_TEST_AUTHORIZATION_CODE",
+    "YAHOO_GEMINI_TEST_ACCESS_TOKEN",
+    "YAHOO_GEMINI_TEST_REFRESH_TOKEN",
   ].each do |env_variable|
     config.filter_sensitive_data("<#{env_variable}>") { ENV[env_variable] }
   end

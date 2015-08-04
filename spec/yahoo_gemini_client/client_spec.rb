@@ -107,6 +107,29 @@ module YahooGeminiClient
       end
     end
 
+    describe "#token_refresh!", vcr: { :record => :once } do
+      let(:reinitialized_client) do
+        described_class.new(
+          consumer_key: ENV["YAHOO_GEMINI_TEST_CONSUMER_KEY"],
+          consumer_secret: ENV["YAHOO_GEMINI_TEST_CONSUMER_SECRET"],
+          token: {
+            access_token: ENV["YAHOO_GEMINI_TEST_ACCESS_TOKEN"],
+            refresh_token: ENV["YAHOO_GEMINI_TEST_REFRESH_TOKEN"],
+          }
+        )
+      end
+
+      it "gets a new access token given a valid refresh token" do
+        expect(reinitialized_client.token.token).to eq ENV["YAHOO_GEMINI_TEST_ACCESS_TOKEN"]
+
+        reinitialized_client.token_refresh!
+
+        expect(reinitialized_client.token.token).not_to be_empty
+        expect(reinitialized_client.token.token).not_to eq ENV["YAHOO_GEMINI_TEST_ACCESS_TOKEN"]
+        expect(reinitialized_client.token.refresh_token).to eq ENV["YAHOO_GEMINI_TEST_REFRESH_TOKEN"]
+      end
+    end
+
   end
 end
 

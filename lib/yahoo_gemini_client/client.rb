@@ -67,7 +67,6 @@ module YahooGeminiClient
       Advertisers.new(client: self)
     end
 
-    # TODO testme
     def token_refresh!
       self.token = self.token.refresh!({:redirect_uri => 'oob', :headers => oauth2_headers})
     end
