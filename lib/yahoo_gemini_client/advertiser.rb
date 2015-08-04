@@ -1,4 +1,4 @@
-module YahooGemini
+module YahooGeminiClient
   class Advertiser
 
     def initialize(hash)

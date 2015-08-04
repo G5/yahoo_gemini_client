@@ -1,4 +1,4 @@
-module YahooGemini
+module YahooGeminiClient
   class Collection
 
     attr_reader :client

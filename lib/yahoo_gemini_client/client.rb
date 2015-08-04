@@ -1,6 +1,6 @@
 require "oauth2"
 
-module YahooGemini
+module YahooGeminiClient
   class Client
     attr_accessor(
       :consumer_key,
@@ -55,7 +55,7 @@ module YahooGemini
     end
 
     def user_agent
-      @user_agent ||= "YahooGeminiRubyGem/#{YahooGemini::VERSION}"
+      @user_agent ||= "YahooGeminiClientRubyGem/#{YahooGeminiClient::VERSION}"
     end
 
     def advertisers

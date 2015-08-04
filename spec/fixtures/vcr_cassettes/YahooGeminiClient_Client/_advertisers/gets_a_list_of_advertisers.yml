@@ -8,7 +8,7 @@ http_interactions:
       string: client_id=<YAHOO_GEMINI_TEST_CONSUMER_KEY>&client_secret=<YAHOO_GEMINI_TEST_CONSUMER_SECRET>&code=<YAHOO_GEMINI_TEST_AUTHORIZATION_CODE>&grant_type=authorization_code&redirect_uri=oob
     headers:
       User-Agent:
-      - YahooGeminiRubyGem/0.1.0
+      - YahooGeminiClientRubyGem/0.1.0
       Content-Type:
       - application/x-www-form-urlencoded
       Accept-Encoding:
@@ -59,7 +59,7 @@ http_interactions:
       Authorization:
       - Bearer kZkOVOSfiSyZ4xlU_mi.j2fdLYIwMkwfzF00imJylaExigu_uYK6wZOmA8HUlZqOKlhLUsPNqf0DWSTZoi91rJ.P8XxZzvkC4WnXLw8fQuZRVEWLuEEmcO6oxcm.5HnIh67iXxGTMZNEop_lur4HOCm1o4RXNFmaCNkcVFF.xoCmHh4dtLS505EKZ8T6f_dm.fcviGRTK8H99bz2x7keO1vjhgot5SaX3QcUw24HGKc6nR0XhDRQ0G8DaZGPeWoytNXpENjjh5VsXgL7BSQJ5j3mZowAufJPXHfhq39VenPbOBMlcnt0WK8l7a1SeaZHFru9DvQoAt69SjeCXVo9Pky1usqHiP3b2sUdlv3zjETFCWC6twmYpdTyhPBrAilVdQDbEtxCyLmKw.PhHCrUB68Ac1fzNysSr2xnqnRm66eFA.kCQglfPSRCOKLUvmU8w8FU4dmXRn_rxzs1kVSkej7yeAEQgRS.Jrp3O5Ofi3QGmdGluEK9qrJwbKHZBsCme93GLI45T6MOC7gaGaTsaoRzPV.CEurWh3WmtFZWh6z.KcW.tgSbn0A4BndnFOOe7SN8bTRuaP91sAWX7uHGtVXdcJhY1dYt51f60UTZB07mE9x1cEh7opap9zcRvxOFJCohhz7ONAIGlSgZZadOI0WqtYX38q87eppr0TIIIthZFdmjCmQN9Athb3dtOeZX6Poq6IwPevE5cC27YvaSd8jPykI10SA356L9agcwq0mBU4ltkRYIN0J.vJbhuyViLyFSFBZIE2QuHY7ZE0MNs_5Gc9s0NS6Vcog-
       User-Agent:
-      - YahooGeminiRubyGem/0.1.0
+      - YahooGeminiClientRubyGem/0.1.0
   response:
     status:
       code: 200
@@ -133,7 +133,7 @@ http_interactions:
       Authorization:
       - Bearer kZkOVOSfiSyZ4xlU_mi.j2fdLYIwMkwfzF00imJylaExigu_uYK6wZOmA8HUlZqOKlhLUsPNqf0DWSTZoi91rJ.P8XxZzvkC4WnXLw8fQuZRVEWLuEEmcO6oxcm.5HnIh67iXxGTMZNEop_lur4HOCm1o4RXNFmaCNkcVFF.xoCmHh4dtLS505EKZ8T6f_dm.fcviGRTK8H99bz2x7keO1vjhgot5SaX3QcUw24HGKc6nR0XhDRQ0G8DaZGPeWoytNXpENjjh5VsXgL7BSQJ5j3mZowAufJPXHfhq39VenPbOBMlcnt0WK8l7a1SeaZHFru9DvQoAt69SjeCXVo9Pky1usqHiP3b2sUdlv3zjETFCWC6twmYpdTyhPBrAilVdQDbEtxCyLmKw.PhHCrUB68Ac1fzNysSr2xnqnRm66eFA.kCQglfPSRCOKLUvmU8w8FU4dmXRn_rxzs1kVSkej7yeAEQgRS.Jrp3O5Ofi3QGmdGluEK9qrJwbKHZBsCme93GLI45T6MOC7gaGaTsaoRzPV.CEurWh3WmtFZWh6z.KcW.tgSbn0A4BndnFOOe7SN8bTRuaP91sAWX7uHGtVXdcJhY1dYt51f60UTZB07mE9x1cEh7opap9zcRvxOFJCohhz7ONAIGlSgZZadOI0WqtYX38q87eppr0TIIIthZFdmjCmQN9Athb3dtOeZX6Poq6IwPevE5cC27YvaSd8jPykI10SA356L9agcwq0mBU4ltkRYIN0J.vJbhuyViLyFSFBZIE2QuHY7ZE0MNs_5Gc9s0NS6Vcog-
       User-Agent:
-      - YahooGeminiRubyGem/0.1.0
+      - YahooGeminiClientRubyGem/0.1.0
   response:
     status:
       code: 401

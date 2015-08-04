@@ -1,6 +1,6 @@
 require "spec_helper"
 
-module YahooGemini
+module YahooGeminiClient
   describe Advertisers do
     let(:client) do
       client = Client.new(

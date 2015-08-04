@@ -1,17 +1,17 @@
 # coding: utf-8
 lib = File.expand_path('../lib', __FILE__)
 $LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
-require 'yahoo_gemini/version'
+require 'yahoo_gemini_client/version'
 
 Gem::Specification.new do |spec|
-  spec.name          = "yahoo_gemini"
-  spec.version       = YahooGemini::VERSION
+  spec.name          = "yahoo_gemini_client"
+  spec.version       = YahooGeminiClient::VERSION
   spec.authors       = ["Ramon Tayag", "Marc Ignacio"]
   spec.email         = ["ramon.tayag@gmail.com", "marcrendlignacio@gmail.com"]
 
   spec.summary       = %q{A Ruby Interface to the Yahoo Gemini API}
   spec.description   = %q{A Ruby Interface to the Yahoo Gemini API}
-  spec.homepage      = "http://github.com/g5/yahoo_gemini"
+  spec.homepage      = "http://github.com/g5/yahoo_gemini_client"
   spec.license       = "MIT"
 
   # Prevent pushing this gem to RubyGems.org by setting 'allowed_push_host', or

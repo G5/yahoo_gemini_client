@@ -8,9 +8,9 @@ Dotenv.load
 Dotenv.overload ".env.override"
 
 require "rspec"
-require "yahoo_gemini"
 require "virtus-matchers"
 require "shoulda/matchers"
+require "yahoo_gemini_client"
 
 RSpec.configure do |config|
   config.include Virtus::Matchers

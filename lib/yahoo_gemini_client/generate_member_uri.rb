@@ -1,4 +1,4 @@
-module YahooGemini
+module YahooGeminiClient
   class GenerateMemberURI
 
     def self.execute(base_uri, ids)
