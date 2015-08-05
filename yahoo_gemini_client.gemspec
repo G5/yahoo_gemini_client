@@ -31,7 +31,6 @@ Gem::Specification.new do |spec|
   spec.add_dependency "httparty", "~> 0.13"
   spec.add_dependency "activesupport", ">= 3.0"
   spec.add_dependency "activemodel"
-  spec.add_dependency "mechanize", "~> 2.7"
   spec.add_dependency "virtus", "~> 1.0"
   spec.add_development_dependency "vcr", "~> 2.9"
   spec.add_development_dependency "webmock", "~> 1.21"
