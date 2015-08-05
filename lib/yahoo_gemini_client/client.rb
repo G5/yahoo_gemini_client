@@ -10,14 +10,19 @@ module YahooGeminiClient
     )
 
     def initialize(options={})
-      options.each do |key, value|
-        instance_variable_set("@#{key}", value)
-      end
+      @consumer_key = options[:consumer_key]
+      @consumer_secret = options[:consumer_secret]
       @oauth2_client ||= OAuth2::Client.new(consumer_key, consumer_secret, {
         :site => 'https://api.login.yahoo.com',
         :authorize_url => '/oauth2/request_auth',
         :token_url => '/oauth2/get_token',
       })
+      if options[:token]
+        @token = OAuth2::AccessToken.from_hash(
+          @oauth2_client,
+          options[:token]
+        )
+      end
     end
 
     def authorization_url
@@ -62,7 +67,6 @@ module YahooGeminiClient
       Advertisers.new(client: self)
     end
 
-    # TODO testme
     def token_refresh!
       self.token = self.token.refresh!({:redirect_uri => 'oob', :headers => oauth2_headers})
     end
