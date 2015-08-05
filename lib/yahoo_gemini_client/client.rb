@@ -68,7 +68,12 @@ module YahooGeminiClient
       Advertisers.new(client: self)
     end
 
+    def campaigns
+      Campaigns.new(client: self)
+    end
+
     def token_refresh!
+      # TODO: handle when there's no token
       self.token = self.token.refresh!({
         :redirect_uri => 'oob',
         :headers => oauth2_headers

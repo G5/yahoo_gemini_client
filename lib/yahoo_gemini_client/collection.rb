@@ -29,6 +29,19 @@ module YahooGeminiClient
       end
     end
 
+    def post(uri, opts={})
+      response = HTTParty.post(uri,{
+        headers: api_request_headers,
+        body: opts.to_json
+      })
+      if response.success?
+        JSON.parse(response.body).with_indifferent_access[:response]
+      else
+        # TODO testme
+        raise "POST Request Unsuccessful. Response: #{response.body}"
+      end
+    end
+
     def member_uri(ids)
       GenerateMemberURI.execute(ids)
     end

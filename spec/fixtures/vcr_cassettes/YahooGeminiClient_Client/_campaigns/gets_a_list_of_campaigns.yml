@@ -1,0 +1,128 @@
+---
+http_interactions:
+- request:
+    method: post
+    uri: https://<YAHOO_GEMINI_TEST_CONSUMER_KEY>:<YAHOO_GEMINI_TEST_CONSUMER_SECRET>@api.login.yahoo.com/oauth2/get_token
+    body:
+      encoding: UTF-8
+      string: client_id=<YAHOO_GEMINI_TEST_CONSUMER_KEY>&client_secret=<YAHOO_GEMINI_TEST_CONSUMER_SECRET>&grant_type=refresh_token&redirect_uri=oob&refresh_token=<YAHOO_GEMINI_TEST_REFRESH_TOKEN>
+    headers:
+      User-Agent:
+      - YahooGeminiClientRubyGem/0.0.1
+      Content-Type:
+      - application/x-www-form-urlencoded
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Thu, 06 Aug 2015 06:44:30 GMT
+      P3p:
+      - policyref="http://info.yahoo.com/w3c/p3p.xml", CP="CAO DSP COR CUR ADM DEV
+        TAI PSA PSD IVAi IVDi CONi TELo OTPi OUR DELi SAMi OTRi UNRi PUBi IND PHY
+        ONL UNI PUR FIN COM NAV INT DEM CNT STA POL HEA PRE LOC GOV"
+      Cache-Control:
+      - no-store, private
+      Pragma:
+      - no-cache
+      Vary:
+      - Accept-Encoding
+      Content-Length:
+      - '821'
+      Content-Type:
+      - application/json;charset=UTF-8
+      Age:
+      - '2'
+      Connection:
+      - close
+      Strict-Transport-Security:
+      - max-age=15552000
+      Server:
+      - ATS
+    body:
+      encoding: ASCII-8BIT
+      string: '{"access_token":"v9ov8xnuhzxPDB5.Y0QZg2Ejk._8VOe71qPhhFRm1_4LZ4TH8oy2DLqn3qxFiWGdi7RV6MktccJlrxFfwJD07Sojb8jtDOfqSjhJjFBW.IBLjZdIvqBCIDOtgk9dXCiH8W97YzmEhMcyEZtjqJoDTS9ufpmHxcLCem9GeWyXcmo4Cl1M.YsjG3EhRh6A32sHJ3GLMYzt8H8iIKGLsLQnpOXpxxFZPpb_G3jLz8LzcOQ8CVUF44lfLjV6pd9Osdr2rd8kh49QBH87z4irJa_k2KxLx4nDSf76KcSM5MoacOXmIHQrWICPMPgNBR_DZ4HdtOo0R_ttWetPgSIz0UIXV5Jb0nDPmhM3kZWajztrpun4X5VbV5qOCQYnay21p_UENbkNv63OzXogKIsQ6Pc6zce8OVs4a7JxwVxQ0bQ19Wjx3FAlzKDFT2TN1HNecZqlr1ZCU3r7vG2Rd2UW8.Gxvt7D1.5My7pXd1xWZLkevZgj5CeYXeOc6F2eQKB.flnZuvyPnfEka0Nje7bPoC.jGLu6fPiG3q5uIOXaXvxJORKQrUjR2ZE4oP6jneNBz78T7IfOL9Gft42NXO.Iib0o8baNjCruh1h6bohdqtmJOLmRUxeUQTkOOICxJ92wiWmAq.FBQ0_ehSFlM0zozVjnhA_4wxkOmkMMZUr6j4Ai8YgAa2Y8YnU3lZG_AJqSpMH0ZLK923QnQrWNoc5uFBh6OP6t_zBUQXczQjeAwMTdfK14V6jDxm48Ok5GowtcdKhkYyiDPZx4G8Os_0gxfgfKq5mPxYPKhZTnUjScMtZ5B6Zg3G5fX0Qty4R9Xu2VFg--","expires_in":3600,"token_type":"bearer","refresh_token":"<YAHOO_GEMINI_TEST_REFRESH_TOKEN>","xoauth_yahoo_guid":"OGJHGR64FXCAF2UALZOCYSY42Y"}'
+    http_version: 
+  recorded_at: Thu, 06 Aug 2015 06:44:32 GMT
+- request:
+    method: get
+    uri: https://api.admanager.yahoo.com/v1/rest/campaign/
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Authorization:
+      - Bearer v9ov8xnuhzxPDB5.Y0QZg2Ejk._8VOe71qPhhFRm1_4LZ4TH8oy2DLqn3qxFiWGdi7RV6MktccJlrxFfwJD07Sojb8jtDOfqSjhJjFBW.IBLjZdIvqBCIDOtgk9dXCiH8W97YzmEhMcyEZtjqJoDTS9ufpmHxcLCem9GeWyXcmo4Cl1M.YsjG3EhRh6A32sHJ3GLMYzt8H8iIKGLsLQnpOXpxxFZPpb_G3jLz8LzcOQ8CVUF44lfLjV6pd9Osdr2rd8kh49QBH87z4irJa_k2KxLx4nDSf76KcSM5MoacOXmIHQrWICPMPgNBR_DZ4HdtOo0R_ttWetPgSIz0UIXV5Jb0nDPmhM3kZWajztrpun4X5VbV5qOCQYnay21p_UENbkNv63OzXogKIsQ6Pc6zce8OVs4a7JxwVxQ0bQ19Wjx3FAlzKDFT2TN1HNecZqlr1ZCU3r7vG2Rd2UW8.Gxvt7D1.5My7pXd1xWZLkevZgj5CeYXeOc6F2eQKB.flnZuvyPnfEka0Nje7bPoC.jGLu6fPiG3q5uIOXaXvxJORKQrUjR2ZE4oP6jneNBz78T7IfOL9Gft42NXO.Iib0o8baNjCruh1h6bohdqtmJOLmRUxeUQTkOOICxJ92wiWmAq.FBQ0_ehSFlM0zozVjnhA_4wxkOmkMMZUr6j4Ai8YgAa2Y8YnU3lZG_AJqSpMH0ZLK923QnQrWNoc5uFBh6OP6t_zBUQXczQjeAwMTdfK14V6jDxm48Ok5GowtcdKhkYyiDPZx4G8Os_0gxfgfKq5mPxYPKhZTnUjScMtZ5B6Zg3G5fX0Qty4R9Xu2VFg--
+      User-Agent:
+      - YahooGeminiClientRubyGem/0.0.1
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Thu, 06 Aug 2015 06:44:32 GMT
+      P3p:
+      - policyref="http://info.yahoo.com/w3c/p3p.xml", CP="CAO DSP COR CUR ADM DEV
+        TAI PSA PSD IVAi IVDi CONi TELo OTPi OUR DELi SAMi OTRi UNRi PUBi IND PHY
+        ONL UNI PUR FIN COM NAV INT DEM CNT STA POL HEA PRE LOC GOV"
+      Cache-Control:
+      - private
+      Vary:
+      - Accept-Encoding
+      Content-Length:
+      - '719'
+      Connection:
+      - close
+      Content-Type:
+      - application/json; charset=utf-8
+    body:
+      encoding: UTF-8
+      string: '{"errors":null,"timestamp":"2015-08-06 6:44:32","response":[{"advertiserId":1113844,"status":"PAUSED","id":342655128,"objective":"PROMOTE_BRAND","campaignName":"NativeAdsCampaign","isPartnerNetwork":"TRUE","budgetType":"LIFETIME","budget":3000,"language":"en","channel":"NATIVE"},{"advertiserId":1113844,"status":"PAUSED","id":342657111,"objective":"VISIT_WEB","campaignName":"NativeAdsCampaign","isPartnerNetwork":"TRUE","budgetType":"LIFETIME","budget":3000,"language":"en","channel":"NATIVE"},{"advertiserId":1113844,"status":"PAUSED","id":342660120,"objective":"VISIT_WEB","campaignName":"Test
+        Campaign","isPartnerNetwork":"TRUE","budgetType":"LIFETIME","budget":250,"language":"en","channel":"SEARCH_AND_NATIVE"}]}'
+    http_version: 
+  recorded_at: Thu, 06 Aug 2015 06:44:34 GMT
+- request:
+    method: get
+    uri: https://api.admanager.yahoo.com/v1/rest/campaign/
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Authorization:
+      - Bearer v9ov8xnuhzxPDB5.Y0QZg2Ejk._8VOe71qPhhFRm1_4LZ4TH8oy2DLqn3qxFiWGdi7RV6MktccJlrxFfwJD07Sojb8jtDOfqSjhJjFBW.IBLjZdIvqBCIDOtgk9dXCiH8W97YzmEhMcyEZtjqJoDTS9ufpmHxcLCem9GeWyXcmo4Cl1M.YsjG3EhRh6A32sHJ3GLMYzt8H8iIKGLsLQnpOXpxxFZPpb_G3jLz8LzcOQ8CVUF44lfLjV6pd9Osdr2rd8kh49QBH87z4irJa_k2KxLx4nDSf76KcSM5MoacOXmIHQrWICPMPgNBR_DZ4HdtOo0R_ttWetPgSIz0UIXV5Jb0nDPmhM3kZWajztrpun4X5VbV5qOCQYnay21p_UENbkNv63OzXogKIsQ6Pc6zce8OVs4a7JxwVxQ0bQ19Wjx3FAlzKDFT2TN1HNecZqlr1ZCU3r7vG2Rd2UW8.Gxvt7D1.5My7pXd1xWZLkevZgj5CeYXeOc6F2eQKB.flnZuvyPnfEka0Nje7bPoC.jGLu6fPiG3q5uIOXaXvxJORKQrUjR2ZE4oP6jneNBz78T7IfOL9Gft42NXO.Iib0o8baNjCruh1h6bohdqtmJOLmRUxeUQTkOOICxJ92wiWmAq.FBQ0_ehSFlM0zozVjnhA_4wxkOmkMMZUr6j4Ai8YgAa2Y8YnU3lZG_AJqSpMH0ZLK923QnQrWNoc5uFBh6OP6t_zBUQXczQjeAwMTdfK14V6jDxm48Ok5GowtcdKhkYyiDPZx4G8Os_0gxfgfKq5mPxYPKhZTnUjScMtZ5B6Zg3G5fX0Qty4R9Xu2VFg--
+      User-Agent:
+      - YahooGeminiClientRubyGem/0.0.1
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Thu, 06 Aug 2015 06:44:33 GMT
+      P3p:
+      - policyref="http://info.yahoo.com/w3c/p3p.xml", CP="CAO DSP COR CUR ADM DEV
+        TAI PSA PSD IVAi IVDi CONi TELo OTPi OUR DELi SAMi OTRi UNRi PUBi IND PHY
+        ONL UNI PUR FIN COM NAV INT DEM CNT STA POL HEA PRE LOC GOV"
+      Cache-Control:
+      - private
+      Vary:
+      - Accept-Encoding
+      Content-Length:
+      - '719'
+      Connection:
+      - close
+      Content-Type:
+      - application/json; charset=utf-8
+    body:
+      encoding: UTF-8
+      string: '{"errors":null,"timestamp":"2015-08-06 6:44:33","response":[{"budgetType":"LIFETIME","budget":3000,"isPartnerNetwork":"TRUE","status":"PAUSED","id":342655128,"language":"en","advertiserId":1113844,"campaignName":"NativeAdsCampaign","objective":"PROMOTE_BRAND","channel":"NATIVE"},{"budgetType":"LIFETIME","budget":3000,"isPartnerNetwork":"TRUE","status":"PAUSED","id":342657111,"language":"en","advertiserId":1113844,"campaignName":"NativeAdsCampaign","objective":"VISIT_WEB","channel":"NATIVE"},{"budgetType":"LIFETIME","budget":250,"isPartnerNetwork":"TRUE","status":"PAUSED","id":342660120,"language":"en","advertiserId":1113844,"campaignName":"Test
+        Campaign","objective":"VISIT_WEB","channel":"SEARCH_AND_NATIVE"}]}'
+    http_version: 
+  recorded_at: Thu, 06 Aug 2015 06:44:35 GMT
+recorded_with: VCR 2.9.3
