@@ -7,7 +7,13 @@ require "dotenv"
 Dotenv.load
 Dotenv.overload ".env.override"
 
+require "rspec"
+require "virtus-matchers"
 require "yahoo_gemini_client"
+
+RSpec.configure do |config|
+  config.include Virtus::Matchers
+end
 
 VCR.configure do |config|
   config.cassette_library_dir = "spec/fixtures/vcr_cassettes"
