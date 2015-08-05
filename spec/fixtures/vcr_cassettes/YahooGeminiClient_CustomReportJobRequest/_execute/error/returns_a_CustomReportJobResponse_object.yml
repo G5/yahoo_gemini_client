@@ -1,0 +1,97 @@
+---
+http_interactions:
+- request:
+    method: post
+    uri: https://<YAHOO_GEMINI_TEST_CONSUMER_KEY>:<YAHOO_GEMINI_TEST_CONSUMER_SECRET>@api.login.yahoo.com/oauth2/get_token
+    body:
+      encoding: UTF-8
+      string: client_id=<YAHOO_GEMINI_TEST_CONSUMER_KEY>&client_secret=<YAHOO_GEMINI_TEST_CONSUMER_SECRET>&grant_type=refresh_token&redirect_uri=oob&refresh_token=<YAHOO_GEMINI_TEST_REFRESH_TOKEN>
+    headers:
+      User-Agent:
+      - YahooGeminiClientRubyGem/0.1.0
+      Content-Type:
+      - application/x-www-form-urlencoded
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Wed, 05 Aug 2015 05:37:34 GMT
+      P3p:
+      - policyref="http://info.yahoo.com/w3c/p3p.xml", CP="CAO DSP COR CUR ADM DEV
+        TAI PSA PSD IVAi IVDi CONi TELo OTPi OUR DELi SAMi OTRi UNRi PUBi IND PHY
+        ONL UNI PUR FIN COM NAV INT DEM CNT STA POL HEA PRE LOC GOV"
+      Cache-Control:
+      - no-store, private
+      Pragma:
+      - no-cache
+      Vary:
+      - Accept-Encoding
+      Content-Length:
+      - '803'
+      Content-Type:
+      - application/json;charset=UTF-8
+      Age:
+      - '1'
+      Connection:
+      - close
+      Strict-Transport-Security:
+      - max-age=15552000
+      Server:
+      - ATS
+    body:
+      encoding: ASCII-8BIT
+      string: '{"access_token":"Xy02UEjDuCuhVwaN91UJKbXilD1sKy6QR3JOGRy2mhLvMvMoZhu897snIoKeGi9INBoTbsu3la4rZ.k3rJknL6i1EL9UdbyMCszX1XgcJDTqJhemtAHLyCT.knswCZB.lkhe2ZHhIu4DU2sQbYYzdx1foi9hVgbiqjb13tji26plaTnRtzHIgCeiah3hxOwXl.2XPL9Y.lKW8ZZC0TADV9Ejs75GOvy_W8G87UiZ4gWO7.l0fPJct2nK_40ZR_PsTMwk_unFACb_OCV60XUeiTyH.7vuSGFfcqoFi33UwfBPSpj7GhPbYtqT2iAofN.KHY9LXSP46gr0Y9bC7dwZ2D_t7pH1vSGNmOCOvHcC_BSXwh98XYPiPQCt18kaJAaEc.slw.mav3Isx9T2YdygzPABILpcfzN0S_Dc2IrDBgimYlqGKfqRrKwHyXI3PlM84lzm2MMFawnjOM62g_WdxT54_DIFFmtUGXX6yB9Lc52bOsSsu5BP01Ok3O3.u2rebNyJW8uXxF15acGlmRLe4YLiBD2pRc8_PV0TJOKIRJFn2Vl1lkFozrCQA7R_myf2V5eRm5xnKRmhkkN7Oh_QVajoWdulBARp4KnHWSGvAFTiNVwGl11N1F5jmGE4Txer1v9VCcUHwvbYwh3iVnPWfl4kyFyqw1IEJF.7elKKCZGs8EFJ.tBDjeAexhVfEAiIhmMleaYv5xLo9aDs3nd.QHnWLxPvZzvNSAioVSHr1AFjPWUkrtimmhNsetWM41UuDOiu9Dk8_j9wLkmKOHH0tjKTrXyg7W7MyOfodtRtxqVgU8GDYN8-","expires_in":3600,"token_type":"bearer","refresh_token":"<YAHOO_GEMINI_TEST_REFRESH_TOKEN>","xoauth_yahoo_guid":"NTXUYMWKCDVZKZI4ZN6JXVW244"}'
+    http_version: 
+  recorded_at: Wed, 05 Aug 2015 05:30:19 GMT
+- request:
+    method: post
+    uri: https://api.admanager.yahoo.com/v1/rest/reports/custom
+    body:
+      encoding: UTF-8
+      string: '{"cube":"performance_stats","fields":[{"field":"Ad ID"},{"field":"Day"},{"alias":"My
+        dummy column","value":""},{"field":"Impressions"},{"field":"Ad Image URL","alias":"url"}],"filters":[{"field":"Advertiser
+        ID","operator":"=","value":"INVALID VALUE"},{"field":"Campaign ID","operator":"IN","values":[10,20,30]},{"field":"Day","operator":"between","from":"2015-07-01","to":"2015-07-30"}]}'
+    headers:
+      Content-Type:
+      - application/json
+      Authorization:
+      - Bearer Xy02UEjDuCuhVwaN91UJKbXilD1sKy6QR3JOGRy2mhLvMvMoZhu897snIoKeGi9INBoTbsu3la4rZ.k3rJknL6i1EL9UdbyMCszX1XgcJDTqJhemtAHLyCT.knswCZB.lkhe2ZHhIu4DU2sQbYYzdx1foi9hVgbiqjb13tji26plaTnRtzHIgCeiah3hxOwXl.2XPL9Y.lKW8ZZC0TADV9Ejs75GOvy_W8G87UiZ4gWO7.l0fPJct2nK_40ZR_PsTMwk_unFACb_OCV60XUeiTyH.7vuSGFfcqoFi33UwfBPSpj7GhPbYtqT2iAofN.KHY9LXSP46gr0Y9bC7dwZ2D_t7pH1vSGNmOCOvHcC_BSXwh98XYPiPQCt18kaJAaEc.slw.mav3Isx9T2YdygzPABILpcfzN0S_Dc2IrDBgimYlqGKfqRrKwHyXI3PlM84lzm2MMFawnjOM62g_WdxT54_DIFFmtUGXX6yB9Lc52bOsSsu5BP01Ok3O3.u2rebNyJW8uXxF15acGlmRLe4YLiBD2pRc8_PV0TJOKIRJFn2Vl1lkFozrCQA7R_myf2V5eRm5xnKRmhkkN7Oh_QVajoWdulBARp4KnHWSGvAFTiNVwGl11N1F5jmGE4Txer1v9VCcUHwvbYwh3iVnPWfl4kyFyqw1IEJF.7elKKCZGs8EFJ.tBDjeAexhVfEAiIhmMleaYv5xLo9aDs3nd.QHnWLxPvZzvNSAioVSHr1AFjPWUkrtimmhNsetWM41UuDOiu9Dk8_j9wLkmKOHH0tjKTrXyg7W7MyOfodtRtxqVgU8GDYN8-
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Wed, 05 Aug 2015 05:37:36 GMT
+      P3p:
+      - policyref="http://info.yahoo.com/w3c/p3p.xml", CP="CAO DSP COR CUR ADM DEV
+        TAI PSA PSD IVAi IVDi CONi TELo OTPi OUR DELi SAMi OTRi UNRi PUBi IND PHY
+        ONL UNI PUR FIN COM NAV INT DEM CNT STA POL HEA PRE LOC GOV"
+      Cache-Control:
+      - private
+      Vary:
+      - Accept-Encoding
+      Content-Length:
+      - '712'
+      Connection:
+      - close
+      Content-Type:
+      - application/json; charset=utf-8
+    body:
+      encoding: UTF-8
+      string: '{"errors":[{"errIndex":-1,"code":"E10000_INTERNAL_SERVER_ERROR,E10000_INTERNAL_SERVER_ERROR,E50000_AUTHORIZATION_ERROR","message":"internal
+        server processing error,internal server processing error,Access Denied to
+        the specified entity(advertiser or publisher)","description":""}],"response":{"cube":"performance_stats","fields":[{"field":"Ad
+        ID"},{"field":"Day"},{"alias":"My dummy column","value":""},{"field":"Impressions"},{"field":"Ad
+        Image URL","alias":"url"}],"filters":[{"field":"Advertiser ID","operator":"=","value":"INVALID
+        VALUE"},{"field":"Campaign ID","operator":"IN","values":[10,20,30]},{"field":"Day","operator":"between","from":"2015-07-01","to":"2015-07-30"}]},"timestamp":"2015-08-05
+        5:37:36"}'
+    http_version: 
+  recorded_at: Wed, 05 Aug 2015 05:30:20 GMT
+recorded_with: VCR 2.9.3
