@@ -1,11 +1,14 @@
 module YahooGeminiClient
   class BaseRequest
 
+    HTTP_REQUEST_HEADER = {"Content-Type" => "application/json"}
+
     include Virtus.model
     attribute :url, String
     attribute :client_id, String
     attribute :client_secret, String
     attribute :refresh_key, String
+    attribute :client
 
     include ActiveModel::Validations
     validates :url, :client_id, :client_secret, :refresh_key, presence: true
@@ -25,5 +28,25 @@ module YahooGeminiClient
       self.class.name.demodulize.gsub("Request", "").underscore.to_sym
     end
 
+    def client
+      Client.new(
+        consumer_key: ENV["YAHOO_GEMINI_TEST_CONSUMER_KEY"],
+        consumer_secret: ENV["YAHOO_GEMINI_TEST_CONSUMER_SECRET"],
+        token: {
+          refresh_token: ENV["YAHOO_GEMINI_TEST_REFRESH_TOKEN"],
+        }
+      )
+    end
+
+    protected
+
+    def access_token
+      @client ||= client.token_refresh!
+      @client.token
+    end
+
+    def http_request_header
+      HTTP_REQUEST_HEADER
+    end
   end
 end
