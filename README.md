@@ -27,6 +27,7 @@ Or install it yourself as:
 client = YahooGeminiClient::Client.new(
   client_id: "consumer_key",
   client_secret: "consumer_secret",
+  token: { refresh_token: "refresh_token" }
 )
 
 client.authorization_url # returns authorization url
