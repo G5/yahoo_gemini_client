@@ -2,6 +2,9 @@
 
 require "bundler/setup"
 require "yahoo_gemini_client"
+require "dotenv"
+Dotenv.load
+Dotenv.overload ".env.override"
 
 # You can add fixtures and/or initialization code here to make experimenting
 # with your gem easier. You can also use a different console, if you like.
@@ -9,6 +12,15 @@ require "yahoo_gemini_client"
 # (If you use this, don't forget to add pry to your Gemfile!)
 # require "pry"
 # Pry.start
+def client
+  @client ||= YahooGeminiClient::Client.new(
+    consumer_key: ENV["YAHOO_GEMINI_TEST_CONSUMER_KEY"],
+    consumer_secret: ENV["YAHOO_GEMINI_TEST_CONSUMER_SECRET"],
+    token: { refresh_token: ENV["YAHOO_GEMINI_TEST_REFRESH_TOKEN"] }
+  )
+end
+puts "Visit authorize url to get new authorization code here:"
+puts client.authorization_url
 
 require "irb"
 IRB.start
