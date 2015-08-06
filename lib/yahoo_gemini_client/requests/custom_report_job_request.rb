@@ -10,7 +10,7 @@ module YahooGeminiClient
         headers: http_request_header.merge(http_authorization_header),
         body: request_body.to_json,
       )
-      CustomReportJobResponse.new(response.with_indifferent_access)
+      CustomReportResponse.new(response.with_indifferent_access)
     end
   end
 end

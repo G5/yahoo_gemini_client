@@ -3,7 +3,7 @@ require 'spec_helper'
 module YahooGeminiClient
   describe CustomReportJobRequest do
     describe "#execute" do
-      context "success", :vcr =>  { :record => :once }do
+      context "success", :vcr =>  { :record => :once } do
         let(:request_body) {
           { cube: "performance_stats",
             fields: [
@@ -23,9 +23,9 @@ module YahooGeminiClient
 
         subject { CustomReportJobRequest.new(request_body: request_body) }
 
-        it "returns a CustomReportJobResponse object" do
+        it "returns a CustomReportResponse object" do
           response = subject.execute
-          expect(response).to be_a CustomReportJobResponse
+          expect(response).to be_a CustomReportResponse
           expect(response.completed?).to be_falsey
           expect(response.error?).to be_falsey
           expect(response.job_id).to_not eq nil
@@ -52,9 +52,9 @@ module YahooGeminiClient
 
         subject { CustomReportJobRequest.new(request_body: request_body) }
 
-        it "returns a CustomReportJobResponse object" do
+        it "returns a CustomReportResponse object" do
           response = subject.execute
-          expect(response).to be_a CustomReportJobResponse
+          expect(response).to be_a CustomReportResponse
           expect(response.completed?).to be_falsey
           expect(response.error?).to be_truthy
           expect(response.job_id).to eq nil

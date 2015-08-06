@@ -12,6 +12,7 @@ require "yahoo_gemini_client/services/custom_report"
 require "yahoo_gemini_client/responses/base_response"
 require "yahoo_gemini_client/requests/base_request"
 require "yahoo_gemini_client/requests/custom_report_job_request"
+require "yahoo_gemini_client/requests/custom_report_check_job_request"
 require "yahoo_gemini_client/responses/custom_report_response"
 
 module YahooGeminiClient

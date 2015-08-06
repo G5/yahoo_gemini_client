@@ -5,9 +5,11 @@ module YahooGeminiClient
     def initialize(json_response)
       @errors = json_response[:errors]
       @timestamp = json_response[:timestamp]
-      @job_id = json_response[:response][:jobId]
-      @status = json_response[:response][:status]
-      @csv_url = json_response[:response][:jobResponse]
+      if json_response[:response]
+        @job_id = json_response[:response][:jobId]
+        @status = json_response[:response][:status]
+        @csv_url = json_response[:response][:jobResponse]
+      end
     end
 
     def error?
