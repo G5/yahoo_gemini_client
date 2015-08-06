@@ -75,7 +75,7 @@ client.advertisers.find(123)
   response = client.custom_report.find(params)
   response.error? # check if response is error
   response.completed? # check if report creation at Yahoo.com is complete
-  response.csv? # get the csv url of the created report
+  response.csv_url # get the csv url of the created report
 ```
 
 ## Development
