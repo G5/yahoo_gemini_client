@@ -69,7 +69,10 @@ module YahooGeminiClient
     end
 
     def token_refresh!
-      self.token = self.token.refresh!({:redirect_uri => 'oob', :headers => oauth2_headers})
+      self.token = self.token.refresh!({
+        :redirect_uri => 'oob',
+        :headers => oauth2_headers
+      })
     end
 
     def custom_report
