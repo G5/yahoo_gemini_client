@@ -16,5 +16,9 @@ require "yahoo_gemini_client/requests/custom_report_check_job_request"
 require "yahoo_gemini_client/responses/custom_report_response"
 
 module YahooGeminiClient
-  # Your code goes here...
+
+  def self.new(*args)
+    Client.new(*args)
+  end
+
 end
