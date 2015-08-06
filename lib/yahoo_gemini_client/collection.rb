@@ -25,7 +25,7 @@ module YahooGeminiClient
         JSON.parse(response.body).with_indifferent_access[:response]
       else
         # TODO testme
-        raise "Reponse Unsuccessful: #{response.body}"
+        raise "GET Request Unsuccessful. Response: #{response.body}"
       end
     end
 
