@@ -78,6 +78,12 @@ client.advertisers.find(123)
   response.csv_url # get the csv url of the created report
 ```
 
+## Creating a Test Yahoo Gemini Account (For Testing)
+
+1. Sign in using any given Yahoo Mail Account and go to `https://gemini.yahoo.com/advertiser/home`
+2. Press "Sign Up" to create a Yahoo Gemini Account.
+3. From here, you can create an advertiser and corresponding campaigns
+
 ## Development
 
 After checking out the repo, run `bin/setup` to install dependencies. Then, run `rake spec` to run the tests. You can also run `bin/console` for an interactive prompt that will allow you to experiment.
