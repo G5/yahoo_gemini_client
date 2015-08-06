@@ -4,8 +4,8 @@ module YahooGeminiClient
       CustomReportJobRequest.new(request_body: request_body).execute
     end
 
-    def self.check(request_body)
-
+    def self.find(params)
+      CustomReportCheckJobRequest.new(params).execute
     end
   end
 end
