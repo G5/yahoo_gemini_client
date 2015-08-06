@@ -27,7 +27,7 @@ Or install it yourself as:
 client = YahooGeminiClient::Client.new(
   client_id: "consumer_key",
   client_secret: "consumer_secret",
-  token: { refresh_token: "refresh_token" }
+  refresh_token: "refresh_token"
 )
 
 client.authorization_url # returns authorization url
@@ -40,6 +40,42 @@ client.get_token(authorization_code)
 # Advertisers endpoint
 client.advertisers.each { |advertiser| puts advertiser.advertiser_name }
 client.advertisers.find(123)
+```
+
+### Custom Reports
+
+#### Requesting Yahoo.com to create a custom report with a given cube
+
+```ruby
+  request_body = { "cube": "performance_stats",
+    "fields": [
+      { "field": "Ad ID" },
+      { "field": "Day" },
+      { "alias": "My dummy column", "value": "" },
+      { "field": "Impressions" },
+      { "field": "Ad Image URL", "alias": "url" }
+    ],
+
+    "filters": [
+      { "field": "Advertiser ID", "operator": "=", "value": 12345 },
+      { "field": "Campaign ID", "operator": "IN", "values": [10,20,30] },
+      { "field": "Day", "operator": "between", "from": "2014-04-01", "to": "2014-04-30" }
+    ]
+  }
+
+  response = client.custom_report.create(request_body)
+  response.error? # check if response is error
+  response.job_id # get the report request token of the report creation job request at Yahoo.com
+```
+
+#### Checking the status of the requested report from Yahoo.com
+
+```ruby
+  params = {advertiser_id: 12345, job_id: "86ea9ba1c645e7a33bddfc06ee5c799fa40d02ce49632927"}
+  response = client.custom_report.find(params)
+  response.error? # check if response is error
+  response.completed? # check if report creation at Yahoo.com is complete
+  response.csv? # get the csv url of the created report
 ```
 
 ## Development
