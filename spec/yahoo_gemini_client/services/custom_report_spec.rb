@@ -3,6 +3,15 @@ require 'spec_helper'
 module YahooGeminiClient
   describe CustomReport do
     let(:advertiser_id) { 12345 }
+    let(:client) do
+      Client.new(
+        consumer_key: ENV["YAHOO_GEMINI_TEST_CONSUMER_KEY"],
+        consumer_secret: ENV["YAHOO_GEMINI_TEST_CONSUMER_SECRET"],
+        token: {
+          refresh_token: ENV["YAHOO_GEMINI_TEST_REFRESH_TOKEN"],
+        }
+      )
+    end
 
     describe "#new" do
       let(:request_body) {
@@ -32,9 +41,12 @@ module YahooGeminiClient
       let(:response) { instance_double("CustomReportResponse") }
 
       it "sends a request to Yahoo to create a report with the given parameters" do
-        expect(CustomReportJobRequest).to receive(:new).with(request_body: request_body).and_return(request)
+        expect(CustomReportJobRequest).
+          to receive(:new).
+          with(request_body: request_body, client: client).
+          and_return(request)
         expect(request).to receive(:execute).and_return(response)
-        described_class.create(request_body)
+        described_class.new(client: client).create(request_body)
       end
     end
 
@@ -50,9 +62,12 @@ module YahooGeminiClient
       let(:response) { instance_double("CustomReportResponse") }
 
       it "sends a request to Yahoo to create a report with the given parameters" do
-        expect(CustomReportCheckJobRequest).to receive(:new).with(params).and_return(request)
+        expect(CustomReportCheckJobRequest).
+          to receive(:new).
+          with(params.merge(client: client)).
+          and_return(request)
         expect(request).to receive(:execute).and_return(response)
-        described_class.find(params)
+        described_class.new(client: client).find(params)
       end
     end
   end

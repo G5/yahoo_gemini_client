@@ -2,6 +2,16 @@ require 'spec_helper'
 
 module YahooGeminiClient
   describe CustomReportJobRequest do
+    let(:client) do
+      Client.new(
+        consumer_key: ENV["YAHOO_GEMINI_TEST_CONSUMER_KEY"],
+        consumer_secret: ENV["YAHOO_GEMINI_TEST_CONSUMER_SECRET"],
+        token: {
+          refresh_token: ENV["YAHOO_GEMINI_TEST_REFRESH_TOKEN"],
+        }
+      )
+    end
+
     describe "#execute" do
       context "success", :vcr =>  { :record => :once } do
         let(:request_body) {
@@ -21,7 +31,12 @@ module YahooGeminiClient
           }
         }
 
-        subject { CustomReportJobRequest.new(request_body: request_body) }
+        subject do
+          CustomReportJobRequest.new(
+            request_body: request_body,
+            client: client,
+          )
+        end
 
         it "returns a CustomReportResponse object" do
           response = subject.execute
@@ -50,7 +65,12 @@ module YahooGeminiClient
           }
         }
 
-        subject { CustomReportJobRequest.new(request_body: request_body) }
+        subject do
+          CustomReportJobRequest.new(
+            request_body: request_body,
+            client: client,
+          )
+        end
 
         it "returns a CustomReportResponse object" do
           response = subject.execute

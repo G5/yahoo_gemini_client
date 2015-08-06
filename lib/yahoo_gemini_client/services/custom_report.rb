@@ -1,11 +1,15 @@
 module YahooGeminiClient
   class CustomReport
-    def self.create(request_body)
-      CustomReportJobRequest.new(request_body: request_body).execute
+    def initialize(opts={})
+      @client = opts[:client]
     end
 
-    def self.find(params)
-      CustomReportCheckJobRequest.new(params).execute
+    def create(request_body)
+      CustomReportJobRequest.new(request_body: request_body, client: @client).execute
+    end
+
+    def find(params)
+      CustomReportCheckJobRequest.new(params.merge(client: @client)).execute
     end
   end
 end

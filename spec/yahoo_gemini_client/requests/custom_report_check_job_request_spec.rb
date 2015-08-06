@@ -2,6 +2,16 @@ require 'spec_helper'
 
 module YahooGeminiClient
   describe CustomReportCheckJobRequest do
+    let(:client) do
+      Client.new(
+        consumer_key: ENV["YAHOO_GEMINI_TEST_CONSUMER_KEY"],
+        consumer_secret: ENV["YAHOO_GEMINI_TEST_CONSUMER_SECRET"],
+        token: {
+          refresh_token: ENV["YAHOO_GEMINI_TEST_REFRESH_TOKEN"],
+        }
+      )
+    end
+
     describe "#execute" do
       let(:requesting_report_job_request_body) {
         { cube: "performance_stats",
@@ -20,13 +30,19 @@ module YahooGeminiClient
         }
       }
       let(:advertiser_id) { 1086126 }
-      let!(:custom_report_job_response_job_id) { CustomReport.create(requesting_report_job_request_body).job_id }
+      let!(:custom_report_job_response_job_id) do
+        CustomReport.
+          new(client: client).
+          create(requesting_report_job_request_body).
+          job_id
+      end
 
       context "success", :vcr =>  { :record => :once } do
         subject do
           CustomReportCheckJobRequest.new({
             advertiser_id: advertiser_id,
-            job_id: custom_report_job_response_job_id
+            job_id: custom_report_job_response_job_id,
+            client: client,
           })
         end
 
@@ -44,7 +60,8 @@ module YahooGeminiClient
         subject do
           CustomReportCheckJobRequest.new({
             advertiser_id: "wrong_advertiser_id",
-            job_id: custom_report_job_response_job_id
+            job_id: custom_report_job_response_job_id,
+            client: client,
           })
         end
 

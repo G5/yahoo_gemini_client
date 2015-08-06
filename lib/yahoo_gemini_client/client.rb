@@ -12,6 +12,7 @@ module YahooGeminiClient
     def initialize(options={})
       @consumer_key = options[:consumer_key]
       @consumer_secret = options[:consumer_secret]
+      @refresh_token = options[:refresh_token]
       @oauth2_client ||= OAuth2::Client.new(consumer_key, consumer_secret, {
         :site => 'https://api.login.yahoo.com',
         :authorize_url => '/oauth2/request_auth',
@@ -69,6 +70,10 @@ module YahooGeminiClient
 
     def token_refresh!
       self.token = self.token.refresh!({:redirect_uri => 'oob', :headers => oauth2_headers})
+    end
+
+    def custom_report
+      CustomReport.new(client: self)
     end
 
   end
