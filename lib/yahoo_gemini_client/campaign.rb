@@ -47,6 +47,18 @@ module YahooGeminiClient
       @hash["isPartnerNetwork"]
     end
 
+    def default_landing_url
+      @hash["defaultLandingUrl"]
+    end
+
+    def tracking_partner
+      @hash["trackingPartner"]
+    end
+
+    def app_locale
+      @hash["appLocale"]
+    end
+
     def to_params_hash
       @hash
     end

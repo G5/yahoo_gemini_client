@@ -18,7 +18,10 @@ module YahooGeminiClient
           "advertiserId" => 2222222,
           "channel" =>"NATIVE",
           "objective" => "PROMOTE_BRAND",
-          "isPartnerNetwork" => "TRUE"
+          "isPartnerNetwork" => "TRUE",
+          "defaultLandingUrl" => "http://example.com",
+          "trackingPartner" => "trackingPartner",
+          "appLocale" => "en-us"
         }
       end
 
@@ -32,6 +35,9 @@ module YahooGeminiClient
       its(:channel) { is_expected.to eq "NATIVE" }
       its(:objective) { is_expected.to eq "PROMOTE_BRAND" }
       its(:is_partner_network) { is_expected.to eq "TRUE" }
+      its(:default_landing_url) { is_expected.to eq "http://example.com" }
+      its(:tracking_partner) { is_expected.to eq "trackingPartner" }
+      its(:app_locale) { is_expected.to eq "en-us" }
       its(:to_params_hash) { is_expected.to eq(campaign_params) }
 
       context "parameter keys are snake_cased and symbols" do
@@ -46,7 +52,10 @@ module YahooGeminiClient
             :advertiser_id => 2222222,
             :channel =>"NATIVE",
             :objective => "PROMOTE_BRAND",
-            :is_partner_network => "TRUE"
+            :is_partner_network => "TRUE",
+            :defaultLandingUrl => "http://example.com",
+            :trackingPartner => "trackingPartner",
+            :appLocale => "en-us",
           }
         end
 
@@ -61,6 +70,10 @@ module YahooGeminiClient
         its(:channel) { is_expected.to eq "NATIVE" }
         its(:objective) { is_expected.to eq "PROMOTE_BRAND" }
         its(:is_partner_network) { is_expected.to eq "TRUE" }
+        its(:default_landing_url) { is_expected.to eq "http://example.com" }
+        its(:tracking_partner) { is_expected.to eq "trackingPartner" }
+        its(:app_locale) { is_expected.to eq "en-us" }
+
       end
     end
 
