@@ -81,5 +81,31 @@ module YahooGeminiClient
       end
     end
 
+    describe "#where", vcr: { record: :all } do
+      # assumes there are at least 2 campaigns created already
+      let(:campaigns_to_find) { client.campaigns.to_a[0..1] }
+
+      it "gives the campaign given the :id" do
+        resulting_campaign = described_class.new(client: client).
+          where(id: campaigns_to_find.first.id)
+
+        expect(resulting_campaign.campaign_name).
+          to eq campaigns_to_find[0].campaign_name
+      end
+
+      context ":id parameter is an array of ids" do
+        it "looks for campaigns matching given id/s" do
+          campaigns = described_class.new(client: client).
+            where(id: campaigns_to_find.map(&:id))
+
+          expect(campaigns.count).to eq 2
+          expect(campaigns[0].campaign_name).
+            to eq campaigns_to_find[0].campaign_name
+          expect(campaigns[1].campaign_name).
+            to eq campaigns_to_find[1].campaign_name
+        end
+      end
+    end
+
   end
 end
