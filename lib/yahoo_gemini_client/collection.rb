@@ -34,7 +34,9 @@ module YahooGeminiClient
         headers: api_request_headers,
         body: opts.to_json
       })
-      if response.success?
+      # TODO: It's seems that there are error messages that
+      # still return as a successful response
+      if response.success? && response["errors"].to_a.count == 0
         JSON.parse(response.body).with_indifferent_access[:response]
       else
         # TODO testme

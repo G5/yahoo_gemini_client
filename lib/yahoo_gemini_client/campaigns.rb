@@ -9,6 +9,7 @@ module YahooGeminiClient
     end
 
     def create(opts={})
+      params = Campaign.new(opts).to_params_hash
       result = post(base_uri, opts)
       Campaign.new(result)
     end
@@ -16,5 +17,6 @@ module YahooGeminiClient
     def base_uri
       'https://api.admanager.yahoo.com/v1/rest/campaign/'
     end
+
   end
 end

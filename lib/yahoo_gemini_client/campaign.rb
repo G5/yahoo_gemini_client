@@ -2,7 +2,9 @@ module YahooGeminiClient
   class Campaign
 
     def initialize(campaign_hash)
-      @hash = campaign_hash
+      @hash = campaign_hash.map do |key,value|
+        {key.to_s.camelize(:lower) => value}
+      end.reduce(:merge)
     end
 
     def id
@@ -43,6 +45,10 @@ module YahooGeminiClient
 
     def is_partner_network
       @hash["isPartnerNetwork"]
+    end
+
+    def to_params_hash
+      @hash
     end
 
   end
