@@ -20,16 +20,16 @@ module YahooGeminiClient
         }
       }
 
-      let(:request) { instance_double("CampaignsFetchRequest") }
-      let(:response) { instance_double("CampaignsFetchResponse") }
+      let(:request) { instance_double("CampaignFetchRequest") }
+      let(:response) { instance_double("CampaignResponse") }
 
       it "sends a request to Yahoo to fetch all campaigns for an advertiser" do
-        expect(CampaignsFetchRequest).
+        expect(CampaignFetchRequest).
           to receive(:new).
           with(params.merge(client: client)).
           and_return(request)
         expect(request).to receive(:execute).and_return(response)
-        described_class.new(client: client).find(params)
+        described_class.new(client: client).where(params)
       end
     end
   end

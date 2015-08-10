@@ -80,7 +80,6 @@ module YahooGeminiClient
       let(:authorization_code) { ENV["YAHOO_GEMINI_TEST_AUTHORIZATION_CODE"] }
 
       it "uses the Authorization Code to get an Access Token" do
-        # TODO: use refresh token so you don't have to authorize manually
         client.get_token(authorization_code)
         expect(client.token).to be_a(OAuth2::AccessToken)
         expect(client.token.expired?).to eq false
@@ -105,31 +104,6 @@ module YahooGeminiClient
         expect(advertisers.count).to be > 0
         expect(advertisers.first.id).to be > 0
         expect(advertisers.first.currency).to eq "USD"
-      end
-    end
-
-    describe "#campaigns", vcr: { record: :once } do
-      let(:client) do
-        client = described_class.new(
-          consumer_key: ENV["YAHOO_GEMINI_TEST_CONSUMER_KEY"],
-          consumer_secret: ENV["YAHOO_GEMINI_TEST_CONSUMER_SECRET"],
-          token: {
-            refresh_token: ENV["YAHOO_GEMINI_TEST_REFRESH_TOKEN"]
-          }
-        )
-        client.token_refresh!
-        client
-      end
-      let(:advertisers) { client.advertisers }
-      let(:advertiser_id) { advertisers.first.id }
-
-      it "gets a list of campaigns" do
-        expect(client.token.expired?).to eq false
-        # assume campaigns are already created
-        campaigns = client.campaigns
-
-        expect(campaigns.count).to be > 0
-        expect(campaigns.first.id).to be > 0
       end
     end
 

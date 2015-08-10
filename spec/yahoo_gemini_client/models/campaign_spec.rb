@@ -27,7 +27,7 @@ module YahooGeminiClient
 
       its(:id) { is_expected.to eq 31336 }
       its(:status) { is_expected.to eq "PAUSED" }
-      its(:campaign_name) { is_expected.to eq "NativeAdsCampaign" }
+      its(:name) { is_expected.to eq "NativeAdsCampaign" }
       its(:budget) { is_expected.to eq 3000 }
       its(:language) { is_expected.to eq "en" }
       its(:budget_type) { is_expected.to eq "LIFETIME" }
@@ -62,7 +62,7 @@ module YahooGeminiClient
 
         its(:id) { is_expected.to eq 31336 }
         its(:status) { is_expected.to eq "PAUSED" }
-        its(:campaign_name) { is_expected.to eq "NativeAdsCampaign" }
+        its(:name) { is_expected.to eq "NativeAdsCampaign" }
         its(:budget) { is_expected.to eq 3000 }
         its(:language) { is_expected.to eq "en" }
         its(:budget_type) { is_expected.to eq "LIFETIME" }

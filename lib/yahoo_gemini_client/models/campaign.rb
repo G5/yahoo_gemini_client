@@ -15,7 +15,7 @@ module YahooGeminiClient
       @hash["status"]
     end
 
-    def campaign_name
+    def name
       @hash["campaignName"]
     end
 
