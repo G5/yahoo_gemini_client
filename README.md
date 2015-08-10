@@ -19,25 +19,39 @@ Or install it yourself as:
     $ gem install yahoo_gemini_client
 
 ## Usage
+Currently supports OAuth2 Auth Code Strategy (Explicit Grant Flow) only.
+For more info see https://developer.yahoo.com/oauth2/guide/flows_authcode/
+
+### Getting a refresh token
+
+Your app can start using this gem if you have a refresh token.
+A refresh token can be manually generated through the console.
 
 ```ruby
-# Currently supports OAuth2 Auth Code Strategy (Explicit Grant Flow) only
-# see https://developer.yahoo.com/oauth2/guide/flows_authcode/
-
 client = YahooGeminiClient::Client.new(
-  client_id: "consumer_key",
-  client_secret: "consumer_secret",
-  refresh_token: "refresh_token"
+  consumer_key: "consumer_key",
+  consumer_secret: "consumer_secret",
 )
 
-client.authorization_url # returns authorization url
+# open a browser and go to the authorization url given to get the authorization code
+authorization_url = client.authorization_url
 
-# visit authorization url returned in a web browser to get the Authorization Code
-# assuming you've got an authentication code...
+# you can now generate the refresh token once you have the authorization code
+refresh_token = client.get_token("the_authorization_code").refresh_token
 
-client.get_token(authorization_code)
+# with the refresh token you can now instantiate and use a YahooGeminiClient::Client anytime
+client = YahooGeminiClient::Client.new(
+  consumer_key: "consumer_key",
+  consumer_secret: "consumer_secret",
+  refresh_token: refresh_token,
+)
+```
 
-# Advertisers endpoint
+### Advertisers
+
+#### Retrieving
+
+```ruby
 client.advertisers.each { |advertiser| puts advertiser.advertiser_name }
 client.advertisers.find(123)
 ```
@@ -77,6 +91,22 @@ client.advertisers.find(123)
   response.completed? # check if report creation at Yahoo.com is complete
   response.csv_url # get the csv url of the created report
 ```
+
+### Campaigns
+
+#### Fetching campaigns for an advertiser
+
+```ruby
+  params = {advertiser_id: 12345}
+  response = client.campaigns.where(params)
+  response.campaigns # returns Array[YahooGeminiClient::Campaign]
+```
+
+## Creating a Test Yahoo Gemini Account (For Testing)
+
+1. Sign in using any given Yahoo Mail Account and go to `https://gemini.yahoo.com/advertiser/home`
+2. Press "Sign Up" to create a Yahoo Gemini Account.
+3. From here, you can create an advertiser and corresponding campaigns
 
 ## Development
 

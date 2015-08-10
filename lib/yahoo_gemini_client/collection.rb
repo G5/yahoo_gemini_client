@@ -25,7 +25,22 @@ module YahooGeminiClient
         JSON.parse(response.body).with_indifferent_access[:response]
       else
         # TODO testme
-        raise "Reponse Unsuccessful: #{response.body}"
+        raise "GET Request Unsuccessful. Response: #{response.body}"
+      end
+    end
+
+    def post(uri, opts={})
+      response = HTTParty.post(uri,{
+        headers: api_request_headers,
+        body: opts.to_json
+      })
+      # TODO: It's seems that there are error messages that
+      # still return as a successful response
+      if response.success? && response["errors"].to_a.count == 0
+        JSON.parse(response.body).with_indifferent_access[:response]
+      else
+        # TODO testme
+        raise "POST Request Unsuccessful. Response: #{response.body}"
       end
     end
 

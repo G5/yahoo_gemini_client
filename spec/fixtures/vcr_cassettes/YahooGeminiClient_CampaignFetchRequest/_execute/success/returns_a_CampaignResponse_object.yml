@@ -1,0 +1,92 @@
+---
+http_interactions:
+- request:
+    method: post
+    uri: https://<YAHOO_GEMINI_TEST_CONSUMER_KEY>:<YAHOO_GEMINI_TEST_CONSUMER_SECRET>@api.login.yahoo.com/oauth2/get_token
+    body:
+      encoding: UTF-8
+      string: client_id=<YAHOO_GEMINI_TEST_CONSUMER_KEY>&client_secret=<YAHOO_GEMINI_TEST_CONSUMER_SECRET>&grant_type=refresh_token&redirect_uri=oob&refresh_token=<YAHOO_GEMINI_TEST_REFRESH_TOKEN>
+    headers:
+      User-Agent:
+      - YahooGeminiClientRubyGem/0.0.1
+      Content-Type:
+      - application/x-www-form-urlencoded
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Mon, 10 Aug 2015 04:15:52 GMT
+      P3p:
+      - policyref="http://info.yahoo.com/w3c/p3p.xml", CP="CAO DSP COR CUR ADM DEV
+        TAI PSA PSD IVAi IVDi CONi TELo OTPi OUR DELi SAMi OTRi UNRi PUBi IND PHY
+        ONL UNI PUR FIN COM NAV INT DEM CNT STA POL HEA PRE LOC GOV"
+      Cache-Control:
+      - no-store, private
+      Pragma:
+      - no-cache
+      Vary:
+      - Accept-Encoding
+      Content-Length:
+      - '803'
+      Content-Type:
+      - application/json;charset=UTF-8
+      Age:
+      - '1'
+      Connection:
+      - close
+      Strict-Transport-Security:
+      - max-age=15552000
+      Server:
+      - ATS
+    body:
+      encoding: ASCII-8BIT
+      string: '{"access_token":"tFOpYzT6oD46.5mFwncAVVXEG0wlMZ3Viu5dyHDcpZTVboDc8ET3RuXDabE3emQRADZ4HoWxjSsNxgk43_jtqdqATKvppYaumAhp1JK78JgkSF1590O84luB.xmwj4HzhXpGzjylbr1AWu_V1Tgy8RdHK6xubT.wUMfZovjDht44TFs0qLK4bZbzx99QrlvjT7Z_ZjSrEoFsEG1YhUPiB4E5NPUD12esOv1YKwOFfUZuE.sRYSBMivgg_VBfp3LwbyfUfgcwOP7SMnQ1AKzxfzcKYB55WzlmcYhHdxRBI2gqlxFG.8.10u9jeiWT.WFG6zV3CcKAoB1Q6U.UpgjFlTS8bm2pRu74f75DOazK7tLEadJmqAZY8WWMznH4yghqtC1WwFCVdm7nJWxV51JLPXOy39SAQQXx0u53ubK86_ZrtVtK0ATWXbt95tePyDA8pOE4sh2Pngzv60aecNFaeYEwos3kZAiv4drqpaTd9le.SlGi6elYR_bVRIqN8IatYrJ_lV3A2jwW.BPbbgSj_KeZ5GQfj_c30pClGhHzre1xKrbArtkA6xO0rVHS9mydj42JVughNciWz90xjkK4fUhH8FiACGtIhUWmFPm4wIgdCfItKBbYK9CS_48Vo3ejddCFS3khh8qTHNRRM6Ml4WgqyzQbwIIKSoWZRUKhHEMKf_dCswMob8h7FFOXp4bDnIx_jcKyzhzMGA5Rf_bAOqBu4fHPREjy6wGiPbDnmovZpreAxv2J_05AFv0jqlienHXb0Mh23dpNGol640umd5bE_7xfXMD6tsnsBDeBr_8pcXGllRyc","expires_in":3600,"token_type":"bearer","refresh_token":"<YAHOO_GEMINI_TEST_REFRESH_TOKEN>","xoauth_yahoo_guid":"NTXUYMWKCDVZKZI4ZN6JXVW244"}'
+    http_version: 
+  recorded_at: Mon, 10 Aug 2015 04:05:55 GMT
+- request:
+    method: get
+    uri: https://api.admanager.yahoo.com/v1/rest/campaign?advertiserId=1086200
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Content-Type:
+      - application/json
+      Authorization:
+      - Bearer tFOpYzT6oD46.5mFwncAVVXEG0wlMZ3Viu5dyHDcpZTVboDc8ET3RuXDabE3emQRADZ4HoWxjSsNxgk43_jtqdqATKvppYaumAhp1JK78JgkSF1590O84luB.xmwj4HzhXpGzjylbr1AWu_V1Tgy8RdHK6xubT.wUMfZovjDht44TFs0qLK4bZbzx99QrlvjT7Z_ZjSrEoFsEG1YhUPiB4E5NPUD12esOv1YKwOFfUZuE.sRYSBMivgg_VBfp3LwbyfUfgcwOP7SMnQ1AKzxfzcKYB55WzlmcYhHdxRBI2gqlxFG.8.10u9jeiWT.WFG6zV3CcKAoB1Q6U.UpgjFlTS8bm2pRu74f75DOazK7tLEadJmqAZY8WWMznH4yghqtC1WwFCVdm7nJWxV51JLPXOy39SAQQXx0u53ubK86_ZrtVtK0ATWXbt95tePyDA8pOE4sh2Pngzv60aecNFaeYEwos3kZAiv4drqpaTd9le.SlGi6elYR_bVRIqN8IatYrJ_lV3A2jwW.BPbbgSj_KeZ5GQfj_c30pClGhHzre1xKrbArtkA6xO0rVHS9mydj42JVughNciWz90xjkK4fUhH8FiACGtIhUWmFPm4wIgdCfItKBbYK9CS_48Vo3ejddCFS3khh8qTHNRRM6Ml4WgqyzQbwIIKSoWZRUKhHEMKf_dCswMob8h7FFOXp4bDnIx_jcKyzhzMGA5Rf_bAOqBu4fHPREjy6wGiPbDnmovZpreAxv2J_05AFv0jqlienHXb0Mh23dpNGol640umd5bE_7xfXMD6tsnsBDeBr_8pcXGllRyc
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Mon, 10 Aug 2015 04:15:52 GMT
+      P3p:
+      - policyref="http://info.yahoo.com/w3c/p3p.xml", CP="CAO DSP COR CUR ADM DEV
+        TAI PSA PSD IVAi IVDi CONi TELo OTPi OUR DELi SAMi OTRi UNRi PUBi IND PHY
+        ONL UNI PUR FIN COM NAV INT DEM CNT STA POL HEA PRE LOC GOV"
+      Cache-Control:
+      - private
+      Vary:
+      - Accept-Encoding
+      Content-Length:
+      - '711'
+      Connection:
+      - close
+      Content-Type:
+      - application/json; charset=utf-8
+    body:
+      encoding: UTF-8
+      string: '{"errors":null,"timestamp":"2015-08-10 4:15:52","response":[{"advertiserId":1086200,"status":"PAUSED","language":"en","id":341715003,"isPartnerNetwork":"TRUE","campaignName":"[non-year]
+        dynamic used inventory","objective":"VISIT_WEB","budgetType":"DAILY","budget":5,"channel":"SEARCH"},{"advertiserId":1086200,"status":"PAUSED","language":"en","id":341715004,"isPartnerNetwork":"TRUE","campaignName":"[year]
+        dynamic used inventory","objective":"VISIT_WEB","budgetType":"DAILY","budget":5,"channel":"SEARCH"},{"advertiserId":1086200,"status":"ACTIVE","language":"en","id":341715005,"isPartnerNetwork":"TRUE","campaignName":"New
+        Cars","objective":"VISIT_WEB","budgetType":"DAILY","budget":15,"channel":"SEARCH"}]}'
+    http_version: 
+  recorded_at: Mon, 10 Aug 2015 04:05:56 GMT
+recorded_with: VCR 2.9.3
