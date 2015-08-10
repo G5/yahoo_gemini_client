@@ -86,27 +86,6 @@ module YahooGeminiClient
       end
     end
 
-    describe "#advertisers", :vcr => { :record => :once } do
-      let(:client) do
-        client = described_class.new(
-          consumer_key: ENV["YAHOO_GEMINI_TEST_CONSUMER_KEY"],
-          consumer_secret: ENV["YAHOO_GEMINI_TEST_CONSUMER_SECRET"],
-        )
-        client.get_token(authorization_code)
-        client
-      end
-      let(:authorization_code) { ENV["YAHOO_GEMINI_TEST_AUTHORIZATION_CODE"] }
-
-      it "gets a list of advertisers", :vcr => { :record => :new_episodes } do
-        expect(client.token.expired?).to eq false
-        advertisers = client.advertisers
-
-        expect(advertisers.count).to be > 0
-        expect(advertisers.first.id).to be > 0
-        expect(advertisers.first.currency).to eq "USD"
-      end
-    end
-
     describe "#token_refresh!", vcr: { :record => :once } do
       let(:reinitialized_client) do
         described_class.new(
