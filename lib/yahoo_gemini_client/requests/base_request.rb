@@ -28,16 +28,6 @@ module YahooGeminiClient
       self.class.name.demodulize.gsub("Request", "").underscore.to_sym
     end
 
-    # def client
-    #   @client ||= Client.new(
-    #     consumer_key: ENV["YAHOO_GEMINI_TEST_CONSUMER_KEY"],
-    #     consumer_secret: ENV["YAHOO_GEMINI_TEST_CONSUMER_SECRET"],
-    #     token: {
-    #       refresh_token: ENV["YAHOO_GEMINI_TEST_REFRESH_TOKEN"],
-    #     }
-    #   )
-    # end
-
     protected
 
     def access_token

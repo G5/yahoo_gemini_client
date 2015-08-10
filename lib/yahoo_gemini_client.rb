@@ -16,6 +16,8 @@ require "yahoo_gemini_client/requests/base_request"
 require "yahoo_gemini_client/requests/custom_report_base_request"
 require "yahoo_gemini_client/requests/custom_report_job_request"
 require "yahoo_gemini_client/requests/custom_report_check_job_request"
+require "yahoo_gemini_client/requests/campaign_base_request"
+require "yahoo_gemini_client/requests/campaign_fetch_request"
 require "yahoo_gemini_client/responses/custom_report_response"
 require "yahoo_gemini_client/responses/campaign_response"
 
