@@ -78,6 +78,14 @@ client.advertisers.find(123)
   response.csv_url # get the csv url of the created report
 ```
 
+#### Fetching campaigns for an advertiser
+
+```ruby
+  params = {advertiser_id: 12345}
+  response = client.campaigns.where(params)
+  response.campaigns # returns Array[YahooGeminiClient::Campaign]
+```
+
 ## Creating a Test Yahoo Gemini Account (For Testing)
 
 1. Sign in using any given Yahoo Mail Account and go to `https://gemini.yahoo.com/advertiser/home`
