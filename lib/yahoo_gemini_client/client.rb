@@ -84,7 +84,9 @@ module YahooGeminiClient
       })
     end
 
-
+    def ad_groups
+      AdGroups.new(client: self)
+    end
 
   end
 end
