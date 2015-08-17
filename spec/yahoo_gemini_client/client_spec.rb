@@ -8,14 +8,14 @@ module YahooGeminiClient
     let(:refresh_token) { ENV["YAHOO_GEMINI_TEST_REFRESH_TOKEN"] }
     let(:expires_at) { Time.now + 200 }
 
-    context "initialization" do
-      let(:client) do
-        described_class.new(
-          consumer_key: consumer_key,
-          consumer_secret: consumer_secret,
-        )
-      end
+    let(:client) do
+      described_class.new(
+        consumer_key: consumer_key,
+        consumer_secret: consumer_secret,
+      )
+    end
 
+    context "initialization" do
       it "initializes with consumer credentials" do
         expect(consumer_key).not_to be_empty
         expect(consumer_secret).not_to be_empty
@@ -86,27 +86,6 @@ module YahooGeminiClient
       end
     end
 
-    describe "#advertisers", :vcr => { :record => :once } do
-      let(:client) do
-        client = described_class.new(
-          consumer_key: ENV["YAHOO_GEMINI_TEST_CONSUMER_KEY"],
-          consumer_secret: ENV["YAHOO_GEMINI_TEST_CONSUMER_SECRET"],
-        )
-        client.get_token(authorization_code)
-        client
-      end
-      let(:authorization_code) { ENV["YAHOO_GEMINI_TEST_AUTHORIZATION_CODE"] }
-
-      it "gets a list of advertisers", :vcr => { :record => :new_episodes } do
-        expect(client.token.expired?).to eq false
-        advertisers = client.advertisers
-
-        expect(advertisers.count).to be > 0
-        expect(advertisers.first.id).to be > 0
-        expect(advertisers.first.currency).to eq "USD"
-      end
-    end
-
     describe "#token_refresh!", vcr: { :record => :once } do
       let(:reinitialized_client) do
         described_class.new(
@@ -130,6 +109,26 @@ module YahooGeminiClient
       end
     end
 
+    context "#advertisers" do
+      specify do
+        expect(Advertisers).to receive(:new).with(client: client)
+        client.advertisers
+      end
+    end
+
+    context "#campaigns" do
+      specify do
+        expect(Campaigns).to receive(:new).with(client: client)
+        client.campaigns
+      end
+    end
+
+    context "#custom_reprt" do
+      specify do
+        expect(CustomReport).to receive(:new).with(client: client)
+        client.custom_report
+      end
+    end
   end
 end
 

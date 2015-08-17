@@ -1,5 +1,5 @@
 module YahooGeminiClient
-  class CustomReportResponse
+  class CustomReportResponse < BaseResponse
     attr_accessor :errors, :timestamp, :job_id, :status, :csv_url
 
     def initialize(json_response)
@@ -10,10 +10,6 @@ module YahooGeminiClient
         @status = json_response[:response][:status]
         @csv_url = json_response[:response][:jobResponse]
       end
-    end
-
-    def error?
-      !@errors.nil?
     end
 
     def completed?

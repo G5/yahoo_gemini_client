@@ -52,8 +52,9 @@ client = YahooGeminiClient::Client.new(
 #### Retrieving
 
 ```ruby
-client.advertisers.each { |advertiser| puts advertiser.advertiser_name }
-client.advertisers.find(123)
+  response = client.advertisers.find(123)
+  response.error? # check if response is error
+  response.advertiser # returns a YahooGeminiClient::Advertiser
 ```
 
 ### Custom Reports

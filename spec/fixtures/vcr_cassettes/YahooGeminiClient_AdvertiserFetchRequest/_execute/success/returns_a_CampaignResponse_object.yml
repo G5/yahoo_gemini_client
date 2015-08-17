@@ -1,0 +1,90 @@
+---
+http_interactions:
+- request:
+    method: post
+    uri: https://<YAHOO_GEMINI_TEST_CONSUMER_KEY>:<YAHOO_GEMINI_TEST_CONSUMER_SECRET>@api.login.yahoo.com/oauth2/get_token
+    body:
+      encoding: UTF-8
+      string: client_id=<YAHOO_GEMINI_TEST_CONSUMER_KEY>&client_secret=<YAHOO_GEMINI_TEST_CONSUMER_SECRET>&grant_type=refresh_token&redirect_uri=oob&refresh_token=<YAHOO_GEMINI_TEST_REFRESH_TOKEN>
+    headers:
+      User-Agent:
+      - YahooGeminiClientRubyGem/0.0.1
+      Content-Type:
+      - application/x-www-form-urlencoded
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Mon, 17 Aug 2015 02:41:29 GMT
+      P3p:
+      - policyref="http://info.yahoo.com/w3c/p3p.xml", CP="CAO DSP COR CUR ADM DEV
+        TAI PSA PSD IVAi IVDi CONi TELo OTPi OUR DELi SAMi OTRi UNRi PUBi IND PHY
+        ONL UNI PUR FIN COM NAV INT DEM CNT STA POL HEA PRE LOC GOV"
+      Cache-Control:
+      - no-store, private
+      Pragma:
+      - no-cache
+      Vary:
+      - Accept-Encoding
+      Content-Length:
+      - '804'
+      Content-Type:
+      - application/json;charset=UTF-8
+      Age:
+      - '1'
+      Connection:
+      - close
+      Strict-Transport-Security:
+      - max-age=15552000
+      Server:
+      - ATS
+    body:
+      encoding: ASCII-8BIT
+      string: '{"access_token":"Jo2nxKnflxq4VBAhYCM4aCK4K_NzwFF5TsJEQbgp_3CFUPWgXO72PdPCLRqUj0yyYZg84z5mmkT_mMhEcudxGHnkGWmjb.OHkrIQDomh_puuWKjy1aR7d.WyXnkkb6TLAmA76hTsqsbxgFlD5658QOGzrSA2HnQf962hjySh3HbDwJU0FEEbs1mQNt7MMh5RlaY5kk9bgbIexoWu9vR43pwzJVet2Kwg0giVMEEjFKixlvlCFlxuDgIYFnhwV.45j2Qcy4yiRdQZfgpQeSn5Y6ALpkdX5ozMiEgG71Pmu.5H6xIL6ZsPsw_.l3z0fxJR9jCiwNWgs6EyZFNJgTqk7zyDhR_kHiJtyxI5o8jk8XISUzH45UCxpSihPyGcDpOwzGjtXvTH3_TZK_QO0cKiHp8sFxaGuqV3hkWDaudylneodonRLLJhLOjx6Iwult7YsrjzfLmidVz3Db6PxQYZFyUePxha_pkwR12kxYiqdX0gI5FymXpKnQATsrGpZ2j_28flPRZ88IgG4BHi8IMsY8KCbRySdD9d.0Z5P1eZASY1RHTCM8Fp1zsWj0FaAY2QvSxWWy6YHr3pADOEBj7Q2Ur4ZEwlgiPefht9fvn5sPMyzDdmXaEpPBQdMxWVr0jt9xfg8xGApeZ_eb9N6gqmva7GjX2mBypW1fMQET0m2LHNrz7Oq.F0ykqofeUUuYlILR8UVkoT2TePVLkI_4mG.188A8k5LxIHZx8jBRAjlheC6gpTHGcLXbHgoQPDnqM8QOHYiwHVYdlR0qwAhF3uZK8eWvbWdYIf51ddEmETqK6X9yQTdlg-","expires_in":3600,"token_type":"bearer","refresh_token":"<YAHOO_GEMINI_TEST_REFRESH_TOKEN>","xoauth_yahoo_guid":"NTXUYMWKCDVZKZI4ZN6JXVW244"}'
+    http_version: 
+  recorded_at: Mon, 17 Aug 2015 02:41:29 GMT
+- request:
+    method: get
+    uri: https://api.admanager.yahoo.com/v1/rest/advertiser/1086524
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Content-Type:
+      - application/json
+      Authorization:
+      - Bearer Jo2nxKnflxq4VBAhYCM4aCK4K_NzwFF5TsJEQbgp_3CFUPWgXO72PdPCLRqUj0yyYZg84z5mmkT_mMhEcudxGHnkGWmjb.OHkrIQDomh_puuWKjy1aR7d.WyXnkkb6TLAmA76hTsqsbxgFlD5658QOGzrSA2HnQf962hjySh3HbDwJU0FEEbs1mQNt7MMh5RlaY5kk9bgbIexoWu9vR43pwzJVet2Kwg0giVMEEjFKixlvlCFlxuDgIYFnhwV.45j2Qcy4yiRdQZfgpQeSn5Y6ALpkdX5ozMiEgG71Pmu.5H6xIL6ZsPsw_.l3z0fxJR9jCiwNWgs6EyZFNJgTqk7zyDhR_kHiJtyxI5o8jk8XISUzH45UCxpSihPyGcDpOwzGjtXvTH3_TZK_QO0cKiHp8sFxaGuqV3hkWDaudylneodonRLLJhLOjx6Iwult7YsrjzfLmidVz3Db6PxQYZFyUePxha_pkwR12kxYiqdX0gI5FymXpKnQATsrGpZ2j_28flPRZ88IgG4BHi8IMsY8KCbRySdD9d.0Z5P1eZASY1RHTCM8Fp1zsWj0FaAY2QvSxWWy6YHr3pADOEBj7Q2Ur4ZEwlgiPefht9fvn5sPMyzDdmXaEpPBQdMxWVr0jt9xfg8xGApeZ_eb9N6gqmva7GjX2mBypW1fMQET0m2LHNrz7Oq.F0ykqofeUUuYlILR8UVkoT2TePVLkI_4mG.188A8k5LxIHZx8jBRAjlheC6gpTHGcLXbHgoQPDnqM8QOHYiwHVYdlR0qwAhF3uZK8eWvbWdYIf51ddEmETqK6X9yQTdlg-
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Mon, 17 Aug 2015 02:41:33 GMT
+      P3p:
+      - policyref="http://info.yahoo.com/w3c/p3p.xml", CP="CAO DSP COR CUR ADM DEV
+        TAI PSA PSD IVAi IVDi CONi TELo OTPi OUR DELi SAMi OTRi UNRi PUBi IND PHY
+        ONL UNI PUR FIN COM NAV INT DEM CNT STA POL HEA PRE LOC GOV"
+      Cache-Control:
+      - private
+      Vary:
+      - Accept-Encoding
+      Content-Length:
+      - '281'
+      Connection:
+      - close
+      Content-Type:
+      - application/json; charset=utf-8
+    body:
+      encoding: UTF-8
+      string: '{"errors":null,"timestamp":"2015-08-17 2:41:33","response":{"bookingCountry":"US","type":"ADVERTISER","currency":"USD","status":"ACTIVE","advertiserName":"HRA
+        - Honda San Marcos","id":1086524,"timezone":"America\/Chicago","billingCountry":"US","managedBy":1032936,"language":"en"}}'
+    http_version: 
+  recorded_at: Mon, 17 Aug 2015 02:41:34 GMT
+recorded_with: VCR 2.9.3

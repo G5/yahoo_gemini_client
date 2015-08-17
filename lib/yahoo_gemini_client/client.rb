@@ -12,13 +12,13 @@ module YahooGeminiClient
     def initialize(options={})
       @consumer_key = options[:consumer_key]
       @consumer_secret = options[:consumer_secret]
-      @refresh_token = options[:refresh_token]
       @oauth2_client ||= OAuth2::Client.new(consumer_key, consumer_secret, {
         :site => 'https://api.login.yahoo.com',
         :authorize_url => '/oauth2/request_auth',
         :token_url => '/oauth2/get_token',
       })
-      if options[:token]
+      if token_hash = options[:token]
+        @refresh_token = token_hash[:refresh_token]
         @token = OAuth2::AccessToken.from_hash(
           @oauth2_client,
           options[:token]
@@ -72,6 +72,10 @@ module YahooGeminiClient
       Campaigns.new(client: self)
     end
 
+    def custom_report
+      CustomReport.new(client: self)
+    end
+
     def token_refresh!
       # TODO: handle when there's no token
       self.token = self.token.refresh!({
@@ -80,9 +84,7 @@ module YahooGeminiClient
       })
     end
 
-    def custom_report
-      CustomReport.new(client: self)
-    end
+
 
   end
 end
