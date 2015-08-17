@@ -1,17 +1,14 @@
 module YahooGeminiClient
-  class CampaignResponse
+  class CampaignResponse < BaseResponse
     attr_accessor :errors, :timestamp, :campaigns
 
     def initialize(json_response)
       @errors = json_response[:errors]
       @timestamp = json_response[:timestamp]
+      @campaigns = []
       if json_response[:response]
         build_campaigns(json_response[:response])
       end
-    end
-
-    def error?
-      !@errors.nil?
     end
 
     private
