@@ -1,3 +1,7 @@
+# TBA
+
+- Make initialization follow what README states (no need to wrap `refresh_token` in a hash)
+
 # 0.1.0
 
 - Add custom reports
