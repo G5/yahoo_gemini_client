@@ -7,9 +7,7 @@ module YahooGeminiClient
       Client.new(
         consumer_key: ENV["YAHOO_GEMINI_TEST_CONSUMER_KEY"],
         consumer_secret: ENV["YAHOO_GEMINI_TEST_CONSUMER_SECRET"],
-        token: {
-          refresh_token: ENV["YAHOO_GEMINI_TEST_REFRESH_TOKEN"],
-        }
+        refresh_token: ENV["YAHOO_GEMINI_TEST_REFRESH_TOKEN"],
       )
     end
 

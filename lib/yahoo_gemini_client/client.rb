@@ -17,13 +17,11 @@ module YahooGeminiClient
         :authorize_url => '/oauth2/request_auth',
         :token_url => '/oauth2/get_token',
       })
-      if token_hash = options[:token]
-        @refresh_token = token_hash[:refresh_token]
-        @token = OAuth2::AccessToken.from_hash(
-          @oauth2_client,
-          options[:token]
-        )
-      end
+      @refresh_token = options[:refresh_token]
+      @token = OAuth2::AccessToken.from_hash(
+        @oauth2_client,
+        refresh_token: @refresh_token,
+      )
     end
 
     def authorization_url
