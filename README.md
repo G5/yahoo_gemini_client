@@ -55,6 +55,10 @@ client = YahooGeminiClient::Client.new(
   response = client.advertisers.find(123)
   response.error? # check if response is error
   response.advertiser # returns a YahooGeminiClient::Advertiser
+
+  response = client.advertisers.all
+  response.error? # check if response is error
+  response.advertisers # returns an array containing YahooGeminiClient::Advertiser
 ```
 
 ### Custom Reports
