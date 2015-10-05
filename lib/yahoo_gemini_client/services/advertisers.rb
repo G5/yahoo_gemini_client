@@ -8,5 +8,9 @@ module YahooGeminiClient
       params = { advertiser_id: advertiser_id }
       AdvertiserFetchRequest.new(params.merge(client: @client)).execute
     end
+
+    def all
+      AdvertisersFetchRequest.new(client: @client).execute
+    end
   end
 end

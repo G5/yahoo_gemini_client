@@ -27,5 +27,18 @@ module YahooGeminiClient
         described_class.new(client: client).find(id)
       end
     end
+
+    describe "#all" do
+      let(:request) { instance_double("AdvertisersFetchRequest") }
+      let(:response) { instance_double("AdvertisersResponse") }
+
+      it "sends a request to Yahoo to fetch data of all advertisers" do
+        expect(AdvertisersFetchRequest).
+          to receive(:new).
+          and_return(request)
+        expect(request).to receive(:execute).and_return(response)
+        described_class.new(client: client).all
+      end
+    end
   end
 end
