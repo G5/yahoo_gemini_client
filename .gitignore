@@ -9,3 +9,4 @@
 /tmp/
 spec/config.yml
 .env.override
+.idea

@@ -12,7 +12,7 @@ module YahooGeminiClient
 
     describe "#execute" do
       context "success", :vcr => { :record => :once } do
-        let(:ad_group_id) { 8260011537 }
+        let(:ad_group_id) { 12345 }
 
         subject do
           AdGroupFetchRequest.new({
@@ -24,7 +24,7 @@ module YahooGeminiClient
         it "returns a AdGroupResponse object" do
           response = subject.execute
           expect(response).to be_a AdGroupResponse
-          expect(response.ad_group.id).to eq 8260011537
+          expect(response.ad_group.id).to eq 12345
           expect(response.error?).to be_falsey
         end
       end

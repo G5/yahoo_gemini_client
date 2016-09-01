@@ -22,9 +22,9 @@ module YahooGeminiClient
               { field: "Ad Image URL", alias: "url" }
             ],
             filters: [
-              { field: "Advertiser ID", operator: "=", value: 1086126 },
+              { field: "Advertiser ID", operator: "=", value: 1643871 },
               { field: "Campaign ID", operator: "IN", values: [10,20,30] },
-              { field: "Day", operator: "between", from: "2015-07-01", to: "2015-07-30" }
+              { field: "Day", operator: "between", from: "2015-09-01", to: "2015-09-30" }
             ]
           }
         }

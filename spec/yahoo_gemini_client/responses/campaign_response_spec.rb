@@ -13,7 +13,7 @@ module YahooGeminiClient
         "id" => 341715003,
         "budgetType" => "DAILY",
         "budget" => 5,
-        "advertiserId" => 1086200,
+        "advertiserId" => 1643871,
         "language" => "en",
         "isPartnerNetwork" => "TRUE",
         "channel" => "SEARCH"
@@ -24,7 +24,7 @@ module YahooGeminiClient
         "id" => 341715004,
         "budgetType" => "DAILY",
         "budget" => 5,
-        "advertiserId" => 1086200,
+        "advertiserId" => 1643871,
         "language" => "en",
         "isPartnerNetwork" => "TRUE",
         "channel" => "SEARCH"
@@ -35,7 +35,7 @@ module YahooGeminiClient
         "id" => 341715005,
         "budgetType" => "DAILY",
         "budget" => 15,
-        "advertiserId" => 1086200,
+        "advertiserId" => 1643871,
         "language" => "en",
         "isPartnerNetwork" => "TRUE",
         "channel" => "SEARCH"

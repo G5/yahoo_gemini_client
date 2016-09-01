@@ -2,7 +2,7 @@ require 'spec_helper'
 
 module YahooGeminiClient
   describe Advertisers do
-    let(:advertiser_id) { 12345 }
+    let(:advertiser_id) { 1643871 }
     let(:client) do
       Client.new(
         consumer_key: ENV["YAHOO_GEMINI_TEST_CONSUMER_KEY"],
