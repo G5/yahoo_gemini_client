@@ -1,6 +1,6 @@
 module YahooGeminiClient
   class CampaignBaseRequest < BaseRequest
-    REQUEST_URI = "https://api.admanager.yahoo.com/v1/rest/campaign"
+    REQUEST_URI = "https://api.admanager.yahoo.com/v2/rest/campaign"
     include Virtus.model
 
     def http_authorization_header

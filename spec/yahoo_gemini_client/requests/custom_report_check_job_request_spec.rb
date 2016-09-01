@@ -23,11 +23,11 @@ module YahooGeminiClient
           filters: [
             { field: "Advertiser ID", operator: "=", value: advertiser_id },
             { field: "Campaign ID", operator: "IN", values: [10,20,30] },
-            { field: "Day", operator: "between", from: "2015-07-01", to: "2015-07-30" }
+            { field: "Day", operator: "between", from: "2015-09-01", to: "2015-09-30" }
           ]
         }
       }
-      let(:advertiser_id) { 1086126 }
+      let(:advertiser_id) { 1643871 }
       let!(:custom_report_job_response_job_id) do
         CustomReport.
           new(client: client).

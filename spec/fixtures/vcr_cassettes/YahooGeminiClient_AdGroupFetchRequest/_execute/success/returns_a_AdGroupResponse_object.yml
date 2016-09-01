@@ -5,10 +5,10 @@ http_interactions:
     uri: https://<YAHOO_GEMINI_TEST_CONSUMER_KEY>:<YAHOO_GEMINI_TEST_CONSUMER_SECRET>@api.login.yahoo.com/oauth2/get_token
     body:
       encoding: UTF-8
-      string: client_id=<YAHOO_GEMINI_TEST_CONSUMER_KEY>&client_secret=<YAHOO_GEMINI_TEST_CONSUMER_SECRET>&grant_type=refresh_token&redirect_uri=oob&refresh_token=<YAHOO_GEMINI_TEST_REFRESH_TOKEN>
+      string: client_id=<YAHOO_GEMINI_TEST_CONSUMER_KEY>&client_secret=<YAHOO_GEMINI_TEST_CONSUMER_SECRET>&grant_type=refresh_token&redirect_uri=oob&refresh_token=<YAHOO_GEMINI_TEST_ACCESS_TOKEN>
     headers:
       User-Agent:
-      - YahooGeminiClientRubyGem/0.0.1
+      - YahooGeminiClientRubyGem/0.2
       Content-Type:
       - application/x-www-form-urlencoded
       Accept-Encoding:
@@ -21,37 +21,35 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Mon, 17 Aug 2015 05:21:58 GMT
-      P3p:
-      - policyref="http://info.yahoo.com/w3c/p3p.xml", CP="CAO DSP COR CUR ADM DEV
-        TAI PSA PSD IVAi IVDi CONi TELo OTPi OUR DELi SAMi OTRi UNRi PUBi IND PHY
-        ONL UNI PUR FIN COM NAV INT DEM CNT STA POL HEA PRE LOC GOV"
+      - Thu, 01 Sep 2016 15:32:23 GMT
+      Content-Type:
+      - application/json; charset=UTF-8
       Cache-Control:
-      - no-store, private
+      - must-revalidate
+      - no-cache
+      - no-store
       Pragma:
       - no-cache
-      Vary:
-      - Accept-Encoding
+      Expires:
+      - '0'
       Content-Length:
-      - '814'
-      Content-Type:
-      - application/json;charset=UTF-8
-      Age:
-      - '2'
-      Connection:
-      - close
-      Strict-Transport-Security:
-      - max-age=15552000
+      - '1003'
       Server:
       - ATS
+      Age:
+      - '0'
+      Strict-Transport-Security:
+      - max-age=15552000
+      Connection:
+      - close
     body:
-      encoding: ASCII-8BIT
-      string: '{"access_token":"0UUQe0LinS7rqqAy3K6jXJtnntUrMGRaPUYoKk21AWHbp4GeGSX34U6NM9tksoqxXIIVFAMRI89g3ht5nHB7UhW8yUXdltmzI_EmqNcJyBuxBLhttK6aEZJsgfU198bgNhK2b2LS8nkCZ9ZT65Oo7xmsJSUijFeVMQbPU0fZ.SsNpSWpfbQZekDKi8K0jDkwXIMPVlABlXMx6aXrBLrJsFvTo7OR5V8V.ZmpGlmrn.56z0IKoQ3AgG8sP0oktcALsAr9bvsKMnPRtxRdQyWrad3qNDJhvQ4J7yfwh7JOhVc6z4u2P7BFcs9pP0ewX4nrpVt.5EwNlAfyXiKNM4cG5jXeng60KJqvKEgEJLkXpLo5JArUCZiqndFr38EHR_6DXDmUhwT1GZH2f2syBQ8cETr9jN5uRLh8XntoBfqZmGNITy2qjlK48k_PSOQbd7nTNQrekxtgPKVukNiojT9fqjTfxuLWCMTFwUexEslgRN_7vPC1lZshUgMShkEvehlSoOiumslzQl8vPylvbS7q7tTuLyM24Ts6ckoS7xKfFYQj6RY5CrqzzlmfZ.wgt_V9Dys7OJJEuT.oqb38rwMRoQv2aEjpJ3e0L6qGWTkCUTg_Fo.R_no557bBXacXwH1bPv86ohQmbz0wnhcZPNhm.GxmzRKv7dxkSVn5TPGrSf75A9aAIEC_5uOjShaUf_B7TDnro_HLMyJo1Vv25hb0qSF4KZggAWjSagFczJ_lJH.sxfZuU7RS_J_Bc5Ju_otpq29rlALwYve3UuoVhBWp5diibyW.v8fIzT6_9aPYigCqRxpOQXjTdfdvZ_Vo","expires_in":3600,"token_type":"bearer","refresh_token":"<YAHOO_GEMINI_TEST_REFRESH_TOKEN>","xoauth_yahoo_guid":"OGJHGR64FXCAF2UALZOCYSY42Y"}'
+      encoding: UTF-8
+      string: '{"access_token":"hz37txOZ4AGujE.wZkox9FV8BxRZyyMdQ4PnaMP7Nmzoio.YwBnMKxLJSEMkUif_li1jSDZiJp52qZhiTn13pPLobR14EQn48WDYAHLiZ9BF.uI6Nwl4NAHhZ1qOsLVRCbbuC1MGHABJXio1vGo3WWv.Zv4thIc6WIf6A623j6t4d1A.vPE9KChBCpk_0Ye8AyFTYKlaJatVSBiH9PTAmoWi77fa6PR4.Dyj4_z0.qSQNQfvpJEJ_w5_xYb6DZDDG4ILDjL0i8X0JeoR9bDCUE8TxqyZkoqaByJZxFKLZ8JNBkhALM79flkQKPJ8dCXVDxmEnCwPKolIKIwwF2jbvUVgb9jUm.NyJVyHXi9Ftn6AHs.E0WJgn.nClDxc4KUgnPQ3FJkhljylrgXjmEzCtqGkNIhb_NdQX.NyXuIcN2grMWdUEBQhmCII94TT44o6KFopjQEZ0FLoWw0gNVyOHN8tb3obT3Ezn0hJTgdkXOtI7M5miIYzUlI4BTEInheF.JmvyUhxUNCzfH38Iq.C3EmGIS5V987qlkqXpBOubuSIpp7jRV9GRB7rK.bWUA.0eXNsSCg3Ad2Y1KyNM.IqW8pMWntxKuAueTyKQb5s2GMT1ha4wnkuhXr8bTWNJFLGyvZjhnt62_MYsa8ZXtKJUbbqfz16ORl2iTocpvfqaJUhR2q3P36vcr8QfrJqEqCEdXTr.a4FsUYohTpK3_B0WaOD27POdlfQkZkrL.gwbcI2jzXu83Op.FBTE2Snj_bImsSSA1NaW9scM5juW6oPnFnigWAhS4qFEbQjXoDd3vXzD52fB9V_yQN1O7s-","refresh_token":"<YAHOO_GEMINI_TEST_ACCESS_TOKEN>","expires_in":3600,"token_type":"bearer","xoauth_yahoo_guid":"V6UETU74T45TKREPJTZSREGB5U"}'
     http_version: 
-  recorded_at: Mon, 17 Aug 2015 05:22:02 GMT
+  recorded_at: Thu, 01 Sep 2016 15:32:24 GMT
 - request:
     method: get
-    uri: https://api.admanager.yahoo.com/v1/rest/adgroup/8260011537
+    uri: https://api.admanager.yahoo.com/v2/rest/adgroup/12345
     body:
       encoding: US-ASCII
       string: ''
@@ -59,32 +57,36 @@ http_interactions:
       Content-Type:
       - application/json
       Authorization:
-      - Bearer 0UUQe0LinS7rqqAy3K6jXJtnntUrMGRaPUYoKk21AWHbp4GeGSX34U6NM9tksoqxXIIVFAMRI89g3ht5nHB7UhW8yUXdltmzI_EmqNcJyBuxBLhttK6aEZJsgfU198bgNhK2b2LS8nkCZ9ZT65Oo7xmsJSUijFeVMQbPU0fZ.SsNpSWpfbQZekDKi8K0jDkwXIMPVlABlXMx6aXrBLrJsFvTo7OR5V8V.ZmpGlmrn.56z0IKoQ3AgG8sP0oktcALsAr9bvsKMnPRtxRdQyWrad3qNDJhvQ4J7yfwh7JOhVc6z4u2P7BFcs9pP0ewX4nrpVt.5EwNlAfyXiKNM4cG5jXeng60KJqvKEgEJLkXpLo5JArUCZiqndFr38EHR_6DXDmUhwT1GZH2f2syBQ8cETr9jN5uRLh8XntoBfqZmGNITy2qjlK48k_PSOQbd7nTNQrekxtgPKVukNiojT9fqjTfxuLWCMTFwUexEslgRN_7vPC1lZshUgMShkEvehlSoOiumslzQl8vPylvbS7q7tTuLyM24Ts6ckoS7xKfFYQj6RY5CrqzzlmfZ.wgt_V9Dys7OJJEuT.oqb38rwMRoQv2aEjpJ3e0L6qGWTkCUTg_Fo.R_no557bBXacXwH1bPv86ohQmbz0wnhcZPNhm.GxmzRKv7dxkSVn5TPGrSf75A9aAIEC_5uOjShaUf_B7TDnro_HLMyJo1Vv25hb0qSF4KZggAWjSagFczJ_lJH.sxfZuU7RS_J_Bc5Ju_otpq29rlALwYve3UuoVhBWp5diibyW.v8fIzT6_9aPYigCqRxpOQXjTdfdvZ_Vo
+      - Bearer hz37txOZ4AGujE.wZkox9FV8BxRZyyMdQ4PnaMP7Nmzoio.YwBnMKxLJSEMkUif_li1jSDZiJp52qZhiTn13pPLobR14EQn48WDYAHLiZ9BF.uI6Nwl4NAHhZ1qOsLVRCbbuC1MGHABJXio1vGo3WWv.Zv4thIc6WIf6A623j6t4d1A.vPE9KChBCpk_0Ye8AyFTYKlaJatVSBiH9PTAmoWi77fa6PR4.Dyj4_z0.qSQNQfvpJEJ_w5_xYb6DZDDG4ILDjL0i8X0JeoR9bDCUE8TxqyZkoqaByJZxFKLZ8JNBkhALM79flkQKPJ8dCXVDxmEnCwPKolIKIwwF2jbvUVgb9jUm.NyJVyHXi9Ftn6AHs.E0WJgn.nClDxc4KUgnPQ3FJkhljylrgXjmEzCtqGkNIhb_NdQX.NyXuIcN2grMWdUEBQhmCII94TT44o6KFopjQEZ0FLoWw0gNVyOHN8tb3obT3Ezn0hJTgdkXOtI7M5miIYzUlI4BTEInheF.JmvyUhxUNCzfH38Iq.C3EmGIS5V987qlkqXpBOubuSIpp7jRV9GRB7rK.bWUA.0eXNsSCg3Ad2Y1KyNM.IqW8pMWntxKuAueTyKQb5s2GMT1ha4wnkuhXr8bTWNJFLGyvZjhnt62_MYsa8ZXtKJUbbqfz16ORl2iTocpvfqaJUhR2q3P36vcr8QfrJqEqCEdXTr.a4FsUYohTpK3_B0WaOD27POdlfQkZkrL.gwbcI2jzXu83Op.FBTE2Snj_bImsSSA1NaW9scM5juW6oPnFnigWAhS4qFEbQjXoDd3vXzD52fB9V_yQN1O7s-
   response:
     status:
       code: 200
       message: OK
     headers:
       Date:
-      - Mon, 17 Aug 2015 05:22:01 GMT
+      - Thu, 01 Sep 2016 15:32:24 GMT
       P3p:
-      - policyref="http://info.yahoo.com/w3c/p3p.xml", CP="CAO DSP COR CUR ADM DEV
-        TAI PSA PSD IVAi IVDi CONi TELo OTPi OUR DELi SAMi OTRi UNRi PUBi IND PHY
-        ONL UNI PUR FIN COM NAV INT DEM CNT STA POL HEA PRE LOC GOV"
+      - policyref="https://policies.yahoo.com/w3c/p3p.xml", CP="CAO DSP COR CUR ADM
+        DEV TAI PSA PSD IVAi IVDi CONi TELo OTPi OUR DELi SAMi OTRi UNRi PUBi IND
+        PHY ONL UNI PUR FIN COM NAV INT DEM CNT STA POL HEA PRE LOC GOV"
       Cache-Control:
       - private
       Vary:
       - Accept-Encoding
       Content-Length:
-      - '351'
-      Connection:
-      - close
+      - '456'
       Content-Type:
       - application/json; charset=utf-8
+      Age:
+      - '0'
+      Connection:
+      - close
+      Server:
+      - ATS
     body:
       encoding: UTF-8
-      string: '{"errors":null,"timestamp":"2015-08-17 5:22:01","response":{"status":"PAUSED","id":8260011537,"bidSet":{"bids":[{"priceType":"CPC","value":22.83,"channel":"NATIVE"},{"priceType":"CPC","value":22.83,"channel":"SEARCH"}]},"advertiserId":1113844,"adGroupName":"Test
-        Ad Group","campaignId":342660120,"startDateStr":"2015-08-06","endDateStr":"2015-09-06"}}'
+      string: '{"errors":null,"timestamp":"2016-09-01 15:32:24","response":{"status":"ACTIVE","biddingStrategy":"DEFAULT","id":12345,"advancedGeoPos":"DEFAULT","advancedGeoNeg":"DEFAULT","adGroupName":"Insurance
+        Policy","startDateStr":"2013-08-22","endDateStr":"2050-01-01","campaignId":335433150,"ecpaGoal":null,"advertiserId":1643871,"lastUpdateDate":1405105027082,"bidSet":{"bids":[{"priceType":"CPC","value":0.15,"channel":"SEARCH"}]},"createdDate":1405105027082}}'
     http_version: 
-  recorded_at: Mon, 17 Aug 2015 05:22:04 GMT
+  recorded_at: Thu, 01 Sep 2016 15:32:24 GMT
 recorded_with: VCR 2.9.3

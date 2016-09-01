@@ -12,7 +12,7 @@ module YahooGeminiClient
 
     describe "#execute" do
       context "success", :vcr => { :record => :once} do
-        let(:advertiser_id) { 1086200 }
+        let(:advertiser_id) { 1643871 }
 
         subject do
           CampaignFetchRequest.new({

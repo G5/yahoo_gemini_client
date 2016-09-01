@@ -70,11 +70,6 @@ module YahooGeminiClient
       end
       let(:authorization_code) { ENV["YAHOO_GEMINI_TEST_AUTHORIZATION_CODE"] }
 
-      it "uses the Authorization Code to get an Access Token" do
-        client.get_token(authorization_code)
-        expect(client.token).to be_a(OAuth2::AccessToken)
-        expect(client.token.expired?).to eq false
-      end
     end
 
     context "#advertisers" do

@@ -1,6 +1,6 @@
 module YahooGeminiClient
   class CustomReportBaseRequest < BaseRequest
-    REQUEST_URI = "https://api.admanager.yahoo.com/v1/rest/reports/custom"
+    REQUEST_URI = "https://api.admanager.yahoo.com/v2/rest/reports/custom"
     include Virtus.model
 
     def http_authorization_header
