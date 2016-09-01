@@ -8,6 +8,9 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 ### Added
 - Add Advertisers.all
 
+### Changed
+- Use v2 API
+
 ## [0.1.1]
 ### Fixed
 - Make initialization follow what README states (no need to wrap `refresh_token` in a hash)
